@@ -1,0 +1,166 @@
+.second_navigation {
+  border-radius: 20px 0px 0px 0px;
+  /* margin-right: 8px; */
+}
+.second_navigation_collapse {
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  margin-top: 32px;
+  cursor: pointer;
+  width: 32px;
+  border: 1px solid #dbe2ea;
+  border-left: none;
+  border-radius: 0px 20px 20px 0px;
+}
+.second_navigation_collapse > img {
+  width: 24px;
+  height: 24px;
+}
+
+.second_navigation_content {
+  width: 176px;
+  background: #fff;
+  border-radius: 0px 0px 0px 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 32px 0;
+}
+
+.second_navigation_content_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.second_navigation_content_header_left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  font-weight: normal;
+  font-size: 14px;
+  color: #101a28;
+  padding-left: 12px;
+}
+
+.second_navigation_content_header_right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.second_navigation_content_header_right > img {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  margin-top: 1px;
+}
+.second_navigation_content_list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 16px;
+}
+.second_navigation_content_list_item {
+  font-weight: normal;
+  font-size: 14px;
+  padding-left: 12px;
+  cursor: pointer;
+  height: 36px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
+}
+.second_navigation_content_list_item_name {
+  font-size: 14px;
+  color: #364052;
+}
+
+.second_navigation_content_list_item_icon {
+  margin-top: 1px;
+  width: 16px;
+  height: 16px;
+}
+.second_navigation_content_list_item_active {
+  background: rgba(55, 114, 254, 0.06);
+  border-radius: 8px;
+}
+.second_navigation_content_list_item_active > .second_navigation_content_list_item_name {
+  color: #3772fe;
+}
+
+.second_navigation_bg {
+  background: #fff;
+  margin-right: 0;
+}
+
+.second_navigation_model_title {
+  padding-left: 12px;
+  font-size: 12px;
+  color: #666e82;
+  margin: 12px 0 3px;
+}
+
+/* 创建应用气泡框 */
+.create_app_popup {
+  position: absolute;
+  background-color: #fff;
+  left: calc(100% + 8px); /* 按钮右侧 + 8px 间距（核心：适配按钮动态宽度） */
+  top: 0; /* 与按钮顶部对齐 */
+  height: 432px;
+  width: 432px;
+  box-shadow: 2px 2px 12px 0px rgba(102, 110, 130, 0.2);
+  border-radius: 8px;
+  z-index: 100;
+  color: #101a28;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* 子项纵向间距 8px */
+  box-sizing: border-box; /* 保证 padding 不超出宽高 */
+  cursor: auto;
+}
+.create_type_item {
+  flex: 1;
+  border-radius: 16px 16px 16px 16px;
+
+  position: relative;
+  padding: 26px 24px;
+  cursor: pointer;
+}
+.find_top_display_item_img {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.find_top_display_item_img > img {
+  width: 240px;
+  height: 128px;
+}
+
+.find_top_display_item_title {
+  font-weight: bold;
+  font-size: 24px;
+  color: #26396a;
+  line-height: 30px;
+  margin-bottom: 12px;
+  font-family: Alimama ShuHeiTi, Alimama ShuHeiTi;
+}
+
+.find_top_display_item_desc {
+  font-size: 12px;
+  color: rgba(38, 57, 106, 0.8);
+  line-height: 18px;
+  width: 240px;
+  word-break: break-word;
+  white-space: normal;
+}

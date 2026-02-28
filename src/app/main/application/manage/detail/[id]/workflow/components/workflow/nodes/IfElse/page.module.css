@@ -1,0 +1,675 @@
+.panel_main_header {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+
+  gap: 6px;
+  padding-bottom:8px;
+  border-bottom: 1px solid #f2f4f6;
+  padding: 8px 20px;
+}
+.panel_main_header_left_icon{
+  width: 24px;
+  height: 24px;
+  
+}
+
+.panel_main_content {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y:auto;
+  overflow-x: hidden;
+  padding: 10px 20px;
+}
+.panel_main_content::-webkit-scrollbar {
+  display: none; /* 仅隐藏滚动条，不影响功能 */
+}
+.panel-if-content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.panel-if-list-wrapper {
+  flex: 1;
+}
+
+/* 新的容器，用于定位 AND 按钮 */
+.panel-if-list-container {
+  position: relative; /* 关键：提供相对定位 */
+  /* 其他可能需要的样式 */
+}
+
+/* 保持你现有的 .panel-if-list-wrapper 样式不变 */
+.panel-if-list-wrapper {
+  /* flex: 1; 或其他你需要的样式 */
+  /* 这里面的子元素 .panel-if-condition-item 应该有 border-left 属性来绘制左侧线 */
+}
+
+.panel_main_header_left_title {
+  font-size: 16px;
+  color: #101A28;
+   width: 280px;
+  border-radius: 6px 6px 6px 6px;
+}
+.panel_main_header_left_title_input {
+  width: 280px !important;
+  background: #ffffff;
+  padding: 4px !important;
+
+}
+/* 未编辑状态：字体加粗 */
+.panel_main_header_left_title_input.not-editing {
+  background: transparent;
+  font-size: 16px !important;
+  font-weight: bold !important;
+}
+
+/* 编辑状态：描边框和字体变小 */
+.panel_main_header_left_title_input.editing {
+  font-size: 14px !important;
+ 
+}
+.panel_main_header_bottom_textarea{
+  padding: 0 !important;
+}
+
+/* 保持 AND 按钮的样式不变，但需要调整它的 transform */
+.panel-and-button {
+  background-color: #fff;
+  border: 1px solid #dddfe4;
+  color: #3772fe !important;
+  border-radius: 8px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+
+  /* 精确地将按钮的中心点对齐到左侧的垂直线上 */
+  transform: translateX(-50%);
+}
+
+.panel-if-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.blue-box {
+  background-color: #3267e8;
+  line-height: 20px;
+  padding: 0 10px;
+  border-radius: 6px;
+  color: #fff;
+  z-index: 999;
+  transform: translateX(-10px);
+}
+.blue-box-else {
+  background-color: #3267e8;
+  line-height: 20px;
+  padding: 0 10px;
+  border-radius: 6px;
+  color: #fff;
+  z-index: 999;
+}
+.add-elseif-condition-btn {
+  background: #F5F9FC !important;
+  width: 100%;
+  line-height: 40px !important;
+  border: none !important;
+  height: 40px !important;
+  color: #8d96a7 !important;
+}
+
+.ml-12 {
+  margin-left: 12px;
+  font-size: 12px;
+  color: #8d96a7;
+}
+
+.panel-if-type-select {
+  height: 24px !important;
+}
+.panel-if-condition-item-left-border {
+  border-left: 1px solid #dddfe4;
+}
+.panel-if-condition-item {
+  display: flex;
+
+  margin-bottom: 8px;
+  gap: 8px;
+  padding-left: 16px;
+  /* 确保它们不会被按钮遮挡 */
+  position: relative;
+  /* z-index: 5; */
+}
+
+.panel-if-condition-item-top {
+  flex: 1;
+  background-color: #F5F9FC;
+  border-radius: 8px;
+  padding: 0 4px;
+  border: 1px solid #dddfe4;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.panel-if-condition-item-top-array {
+  width: 390px;
+  background-color: #fff;
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+.panel-if-condition-array-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F5F9FC;
+  border: 1px solid #dddfe4;
+  padding: 4px;
+  border-radius: 8px;
+}
+.panel-if-condition-common-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.panel-if-condition-item-left {
+  flex: 1;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.panel-if-condition-text-container {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.panel-condition-item-dropdown {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.panel-if-condition-input:global(.ant-input) {
+  padding: 0 !important;
+}
+
+/* Number显示下拉框及input容器 */
+.panel-condition-number-select {
+  display: flex;
+  align-items: center;
+  height: 36px;
+}
+
+.panel-if-condition-text {
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+
+  /* white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 1; */
+  max-width: 180px;
+}
+.panel-if-condition-text span {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex-shrink: 1;
+  min-width: 0; /* 关键 */
+}
+
+.panel-if-condition-text-type {
+  color: #8d96a7;
+}
+.panel-if-condition-text-icon {
+  margin-right: 2px;
+}
+.panel-if-condition-right {
+  display: flex;
+  align-items: center;
+}
+.panel-if-condition-select :global(.ant-select-selector) {
+  padding: 0 !important;
+}
+
+.panel-if-condition-button-wrapper::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 14px;
+  background-color: #e6e6e6;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.panel-else-tips {
+  margin-top: 10px;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.panel-if-condition-item-delete {
+ 
+}
+
+.panel-if-add-condition-button {
+  height: 28px !important;
+  width: 128px;
+  border-radius: 6px;
+  background: rgba(242, 244, 246, 0.5) !important;
+  border: 1px dashed #dddfe4 !important;
+  font-size: 12px !important;
+}
+
+/* 条件类型气泡框 */
+.condition-type-popover {
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+}
+.condition-type-item {
+  text-align: center;
+  cursor: pointer;
+  padding: 5px;
+}
+.condition-type-item:hover {
+  background-color: #f3f4f8;
+  border-radius: 6px;
+}
+
+.panel-condition-option-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 变量选择搜索气泡框样式 */
+.variable-select-popover {
+  width: 100%; /* 或者根据你的设计调整 */
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.variable-list {
+  max-height: 200px; /* 限制高度，以便滚动 */
+  overflow-y: auto;
+}
+
+.variable-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.variable-item:hover {
+  background-color: #f5f5f5;
+}
+
+.variable-name {
+  font-size: 14px;
+  color: #333;
+}
+
+.variable-type {
+  font-size: 12px;
+  color: #999;
+}
+
+.no-results {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+}
+
+.dividing-line {
+  width: 1px;
+  height: 20px;
+  background: #dddfe4;
+  margin: 0 6px;
+}
+
+/* 添加子变量 */
+.variable-child-wrapper {
+  margin: 4px;
+  background-color: #fff;
+  padding: 6px;
+  /* border-radius: 6px; */
+  position: relative;
+}
+.variable-child-wrapper-button {
+  background-color: #fff;
+  border: 1px solid #dddfe4;
+  color: #3772fe !important;
+  border-radius: 8px;
+  width: 22px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+
+  /* 精确地将按钮的中心点对齐到左侧的垂直线上 */
+  transform: translateX(-50%);
+}
+.variable-child-add-button {
+  width: 114px;
+  height: 28px !important;
+  background: rgba(242, 244, 246, 0.5) !important;
+  border-radius: 8px !important;
+  border: 1px dashed #dddfe4 !important;
+  color: #3772fe !important;
+  font-size: 12px !important;
+}
+
+/* 新增的样式 */
+.variable-child-wrapper {
+  margin-top: 8px;
+  padding-left: 16px; /* 缩进 */
+  border-left: 1px solid #dddfe4; /* 虚线 */
+}
+
+.child-items-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.child-item {
+  margin-bottom: 6px;
+  padding-right: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.variable-child-container {
+  display: flex;
+  align-items: center;
+}
+.variable-child-row {
+  display: flex;
+}
+.variable-child-container {
+  background: #F5F9FC;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dddfe4;
+  border-radius: 8px;
+}
+
+.panel-if-condition-bottom {
+  border-top: 1px solid #dddfe4;
+  width: 100%;
+}
+
+.node-background {
+  font-size: 12px;
+  color: #666e82;
+  margin-bottom: 4px;
+}
+
+.node-condition-wrapper .condition-text {
+  text-align: right;
+  font-size: 14px;
+  color: #364052;
+  line-height: 20px;
+  margin-bottom: 2px;
+  position: relative;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+.node-name-color {
+  color: #364052;
+}
+
+/* 新增的容器，用于包裹所有条件项 */
+.panel-if-condition-group {
+  position: relative; /* 关键：为内部的绝对定位元素提供参照 */
+  margin-left: 2px;
+}
+/* 只有长度大于1时才加边框和缩进 */
+.with-border {
+  border-left: 1px solid #dddfe4;
+  padding-left: 14px;
+}
+
+/* 新增的 AND 按钮的包裹容器 */
+.panel-and-button-wrapper {
+  position: absolute;
+  top: 50%; /* 放置在每个条件项的顶部 */
+  transform: translateY(-50%);
+  left: 0; /* 放置在最左侧 */
+  z-index: 10;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+}
+
+
+/*index--- 新增的 AND 按钮的包裹容器 */
+.index-panel-if-condition-group {
+  position: relative; /* 关键：为内部的绝对定位元素提供参照 */
+  margin-left: 2px;
+}
+.index-panel-and-button-wrapper {
+  position: absolute;
+  top: 50%; /* 放置在每个条件项的顶部 */
+  left: -10px; /* 放置在最左侧 */
+  z-index: 10;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+}
+
+/* 保持 AND 按钮的样式不变 */
+.index-panel-and-button {
+  background-color: #fff;
+  color: #3772fe !important;
+  border-radius: 8px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+/*index-child--- 新增的 AND 按钮的包裹容器 */
+.index-child-panel-if-condition-group {
+  position: relative; /* 关键：为内部的绝对定位元素提供参照 */
+  margin-left: 2px;
+}
+.index-child-panel-and-button-wrapper {
+  position: absolute;
+  top: 50%; /* 放置在每个条件项的顶部 */
+  left: -10px; /* 放置在最左侧 */
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+}
+
+/* 保持 AND 按钮的样式不变 */
+.index-child-panel-and-button {
+  background-color: #f2f4f6;
+  color: #3772fe !important;
+  border-radius: 8px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* 调整条件项的样式，移除左侧线和左内边距 */
+.panel-if-condition-left-item {
+  background: #F5F9FC;
+  border-radius: 4px;
+  margin-bottom: 2px;
+  padding: 4px 8px; /* 调整内边距，移除左侧多余空间 */
+  display: flex;
+  justify-content: space-between;
+}
+
+.panel-if-condition-left-item-column {
+  display: flex;
+  flex-direction: column;
+}
+.panel-if-condition-left-item-relation {
+  font-weight: 500;
+  color: #364052;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+/* .panel-if-condition-item-title {
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  
+} */
+.panel-if-condition-item-title {
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 4px;
+  display: inline-flex; /* inline-flex 让宽度只包裹内容 */
+  align-items: center;
+
+  /* 关键 */
+  width: max-content;
+}
+
+.panel-if-condition-item-title-blue {
+  color: #3772fe;
+}
+.panel-if-condition-item-content {
+  padding: 4px;
+}
+.panel-if-condition-item-sub {
+  margin: 6px 0;
+  color: #364052;
+}
+.m6 {
+  margin: 0 6px;
+}
+
+.node-condition-wrapper {
+  margin-top: 12px;
+}
+.doc_parse_dropdowm_content_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 8px;
+  cursor: pointer;
+}
+.doc_parse_dropdowm_content_item:hover {
+  border-radius: 4px 4px 4px 4px;
+  background: #f2f4f6;
+}
+
+.doc_parse_dropdowm_content_item:hover > .doc_parse_dropdowm_file_types_wrap {
+  display: block;
+}
+.doc_parse_dropdowm_file_types_wrap {
+  width: 252px;
+  height: 236px;
+  background: #ffffff;
+  box-shadow: 2px 2px 12px 0px rgba(102, 110, 130, 0.2);
+  border-radius: 8px 8px 8px 8px;
+  padding: 8px;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  overflow-y: visible;
+  display: none;
+}
+.doc_parse_dropdowm_file_types_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  cursor: pointer;
+  color: #666e82;
+}
+
+.doc_parse_dropdowm_file_types_item:hover {
+  background: #f2f4f6;
+  border-radius: 4px 4px 4px 4px;
+}
+.doc_parse_dropdowm_file_types_item:hover .doc_parse_dropdowm_file_types_wrap-children {
+  display: block;
+}
+
+.doc_parse_dropdowm_file_types_wrap-children {
+  /* width: 252px; */
+  height: 236px;
+  background: #ffffff;
+  box-shadow: 2px 2px 12px 0px rgba(102, 110, 130, 0.2);
+  border-radius: 8px 8px 8px 8px;
+  padding: 8px;
+  position: absolute;
+  top: 0;
+  right: 96%;
+  overflow-y: auto;
+
+  display: none;
+}
+/* .doc_parse_dropdowm_file_types_wrap-children::-webkit-scrollbar{
+  display: none;
+} */
+.panel-if-condition-item-top :global(.ant-dropdown-trigger) {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.panel_close {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.if_node {
+  background: linear-gradient(360deg, rgba(143, 63, 255, 0) 0%, rgba(235, 47, 150, 0.06) 100%)no-repeat,
+    #ffffff;
+  box-shadow: 2px 3px 12px 0px rgba(102, 110, 130, 0.2);
+  background-size: 100% 55px;
+  background-position: top;
+}
+.panel-if-condition-var-icon {
+  width: 14px;
+  height: 14px;
+  /* margin-left: 4px; */
+}
+
+.if_border{
+  width: 100%;
+  height: 1px;
+  background: #dddfe4;
+}

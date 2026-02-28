@@ -1,0 +1,338 @@
+
+.agent_chat_page{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  background: #fcfcfd;
+}
+.agent_chat_page_left{
+  width: 240px;
+
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background: #f5f9fc;
+  gap: 24px;
+  box-sizing: border-box;
+}
+.agent_chat_page_left_header{
+  height: 48px;
+  display: flex;
+  align-items: center;
+
+}
+.agent_chat_page_right{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.agent_chat_page_left_header_icon{
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+}
+.agent_chat_page_left_header_name{
+  font-weight: normal;
+  font-size: 16px;
+  color: #101A28;
+  margin-left: 12px;
+}
+.agent_chat_page_left_header_name_text{
+  font-weight: normal;
+  font-size: 16px;
+  color: #101A28;
+}
+.agent_chat_page_left_header_right{
+  width: 32px;
+height: 32px;
+
+border-radius: 8px 8px 8px 8px;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-left: auto;
+}
+.agent_chat_page_left_header_right:hover{
+  background: #F2F4F6;
+}
+.agent_chat_page_left_header_right>img{
+  width:16px;
+  height: 16px;
+}
+.agent_chat_page_left_header_btn{
+  width: 208px;
+height: 40px;
+background: rgba(55,114,254,0.06);
+border-radius: 8px 8px 8px 8px;
+display: flex;
+display: -webkit-flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+gap: 4px;
+font-size: 14px;
+color: #3772FE;
+font-weight: normal;
+}
+.agent_chat_page_left_header_btn>img{
+  width: 20px;
+  height: 20px;
+}
+.agent_chat_page_left_content{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 12px;
+  overflow-x: hidden;
+  /* 隐藏滚动条 */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.agent_chat_page_left_content_item{
+  height: 36px;
+  background: #F5F9FC;
+  border-radius: 8px;
+  border: 1px solid #DDDFE4;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 日期分组样式 */
+.agent_chat_date_group {
+  margin-bottom: 16px;
+}
+
+.agent_chat_date_group:last-child {
+  margin-bottom: 0;
+}
+
+.agent_chat_date_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.agent_chat_date_text {
+  font-weight: normal;
+  font-size: 13px;
+  color: #8D96A7;
+}
+
+.agent_chat_date_expand_icon {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.agent_chat_date_expand_icon:hover {
+  opacity: 1;
+}
+
+.agent_chat_date_expand_icon_expanded {
+  transform: rotate(180deg);
+}
+
+.agent_chat_date_content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+  padding-left: 0;
+}
+
+/* 对话项样式 */
+.agent_chat_item {
+  height: 36px;
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s;
+  box-sizing: border-box;
+}
+
+.agent_chat_item:hover {
+  background: #FFFFFF;
+  border-radius: 8px 8px 8px 8px;
+}
+
+.agent_chat_page_left_content_item_name {
+  flex: 1;
+  font-size: 14px;
+  color: #101A28;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 8px;
+}
+.agent_chat_page_left_content_item_name_text{
+  font-weight: normal;
+font-size: 14px;
+color: #364052;
+}
+
+/* 操作按钮容器 */
+.agent_chat_item_actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.agent_chat_item_hovered{
+  background: #FFFFFF;
+border-radius: 8px 8px 8px 8px;
+}
+.agent_chat_item_action_icon {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.update_content{
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border-radius: 24px;
+  background-image: url('/chat/update_bg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 220px;
+}
+
+.update_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ height: 76px;
+ padding: 0 32px;
+}
+
+.update_title{
+  font-weight: 500;
+  font-size: 16px;
+  color: #364052;
+  line-height: 24px;
+}
+
+.update_close{
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.update_close:hover{
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.update_close :global(.anticon){
+  font-size: 16px;
+  color: #666E82;
+}
+
+.update_body{
+  padding: 0 32px;
+
+}
+
+.update_footer{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  padding: 0 24px 24px 24px;
+}
+
+.update_footer_btn{
+  min-width: 80px;
+  height: 36px!important;
+  border-radius: 8px!important;
+  font-size: 14px!important;
+
+}
+.update_footer_btn_save{
+  min-width: 80px;
+  height: 36px!important;
+  border-radius: 8px!important;
+  font-size: 14px!important;
+  background: #3772FE!important;
+}
+
+
+.update_body :global(.ant-input){
+
+  border-radius: 8px;
+  border: 1px solid #DDDFE4;
+}
+
+.update_body :global(.ant-form-item-label > label){
+  font-size: 14px;
+  color: #666E82;
+  font-weight: 400;
+}
+
+.workflow_panel_expand{
+  width: 32px;
+height: 32px;
+background: #FFFFFF;
+box-shadow: 3px 4px 16px 0px rgba(102,110,130,0.2);
+border-radius: 8px;
+
+cursor: pointer;
+display: flex;
+display: -webkit-flex;
+align-items: center;
+justify-content: center;
+position: absolute;
+top:16px;
+left:16px;
+z-index: 800;
+}
+.workflow_panel_expand>img{
+  width: 16px;
+  height: 16px;
+}
+
+.agent_chat_item_action_edit{
+  width: 24px;
+height: 24px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.agent_chat_item_action_edit:hover{
+  background: #F2F4F6;
+  border-radius: 6px 6px 6px 6px; 
+}
+.agent_chat_item_action_delete{
+  width: 24px;
+height: 24px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.agent_chat_item_action_delete:hover{
+  background: rgba(238,90,85,0.1);
+  border-radius: 6px 6px 6px 6px;
+}

@@ -1,0 +1,581 @@
+.model-square-page {
+  padding: 32px 25px 0;
+  height: 100%;
+  background-color: #f5f9fc;
+  display: flex;
+  flex-direction: column;
+}
+.search-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 24px 0;
+  padding-right: 4px;
+}
+.search-container-left {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  /* margin-right: 8px; */
+}
+
+.page-content {
+  flex: 1;
+  margin-right: 4px;
+  display: flex;
+  overflow: hidden;
+}
+.page-content-left {
+  flex: 1;
+  /* overflow-y: auto; */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 32px;
+}
+.page-content-right {
+  width: 170px;
+  margin-top: 24px;
+}
+.model-content {
+  flex: 1;
+  overflow-y: scroll;
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); */
+  gap: 16px;
+  grid-auto-rows: min-content;
+}
+.model-content::-webkit-scrollbar {
+  display: none;
+}
+/* 右侧筛选 */
+.filter {
+  flex: 1;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  color: #364052;
+  border-left: 1px solid #dbe2ea;
+  height: 100%;
+}
+.filter_title {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.rotate {
+  transform: rotate(180deg); /* 或根据需求旋转180deg */
+}
+.checkbox_group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #364052;
+  transition: max-height 0.2s ease;
+}
+
+.checkbox :global(.ant-checkbox-label) {
+  color: #364052;
+}
+
+.checkbox_item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.type-container {
+  margin-bottom: 14px;
+}
+.page-title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.search-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.right-btn {
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+}
+.right-btn::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 24px;
+  background: #dddfe4;
+  margin-right: 8px;
+}
+
+.icons-container {
+  display: flex;
+  align-items: center;
+}
+.edit-icon {
+  width: 0;
+}
+
+.model-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+}
+
+.tag-title {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: 16px;
+  white-space: nowrap;
+}
+
+.title-text {
+  font-weight: 500;
+  color: #364052;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 编辑/删除图标 */
+.icons-container {
+  display: flex;
+  /* gap: 8px; */
+}
+
+.tag-content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+/* 横向滚动区域 */
+.tag-group-wrapper {
+  flex: 1;
+  overflow-x: auto;
+  display: flex;
+  white-space: nowrap;
+  scrollbar-width: none;
+  margin-right: 8px; /* 给按钮留间距 */
+}
+
+.tag-group-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.edit-icon:hover {
+  width: 15px;
+  background-color: #fff;
+  padding: 4px;
+  border-radius: 6px;
+  box-sizing: content-box;
+}
+
+/* 功能按钮 */
+.ml8 {
+  margin-left: 8px;
+}
+
+.model-list {
+  flex: 1;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+  gap: 16px;
+  grid-auto-rows: min-content;
+}
+.model-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* 卡片样式*/
+.app-card {
+  height: 192px;
+  position: relative;
+  border-radius: 16px !important;
+  background-color: #ffffff !important;
+  cursor: pointer;
+  min-width: 310px; /* 与 grid 最小宽度一致，防止卡片被无限压缩 */
+  box-sizing: border-box; /* 确保 padding/border 不影响宽度 */
+  padding: 20px; /* 增加内边距，避免内容贴边 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  min-width: 324px;
+}
+/* .app-card:global(.ant-card-bordered) {
+  border: none !important;
+} */
+
+.card-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.avatar-wrapper {
+  flex-shrink: 0;
+}
+
+.card-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  margin-left: 10px;
+  flex: 1;
+  display: flex;
+  margin-left: 10px;
+  min-width: 0;
+  padding: 2px 0;
+}
+
+.card-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* 允许标签换行 */
+  gap: 4px; /* 增加标签与时间的间距 */
+}
+.card-info-container > div {
+  display: flex;
+  flex-wrap: wrap; /* 标签换行 */
+  gap: 4px; /* 标签之间的间距 */
+  max-width: 70%; /* 限制标签容器宽度，给时间留空间 */
+}
+
+.card-name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  font-size: 16px;
+  color: #364052;
+  font-family: Alibaba PuHuiTi 3.0, Alibaba PuHuiTi 30;
+  min-width: 0; /* 允许标题容器收缩，但保留省略号 */
+}
+
+.updated-time {
+  height: 22px;
+  line-height: 22px;
+  font-size: 10px;
+  color: #8d96a7;
+  /* opacity: 0; */
+  text-align: right;
+}
+
+.app-card:hover {
+  background: linear-gradient(
+    164deg,
+    /* 从左上角到右下角 */ rgba(167, 185, 255, 0.25) 0%,
+    /* 起点 */ rgba(255, 255, 255, 1) 35%,
+    /* 中间 */ rgba(255, 255, 255, 1) 65%,
+    /* 中间 */ rgba(204, 235, 255, 0.35) 100% /* 终点 */
+  ) !important;
+  box-shadow: 2px 4px 24px 0px rgba(102, 110, 130, 0.2);
+  border-radius: 16px 16px 16px 16px;
+  border: 1px solid rgba(50, 103, 232, 0.2) !important;
+}
+
+.describe {
+  flex: 1;
+  font-size: 12px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  line-height: 1.5;
+  max-height: 36px;
+  color: #666e82;
+  letter-spacing: 0.5px;
+  width: 100%; /* 确保描述占满卡片宽度 */
+  box-sizing: border-box;
+}
+.card-bottom {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #8d96a7;
+  width: calc(100% - 2px);
+}
+.bottom-left {
+  display: flex;
+  align-items: center;
+  flex: 1; /* 让它占据剩余空间 */
+  min-width: 0; /* 必须加，否则 flex 子项不会触发省略 */
+  overflow: hidden;
+}
+
+.tags {
+  height: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  max-width: 100%;
+}
+.ellipsis-icon {
+  height: 30px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: rgba(220, 220, 220, 0.3); /* 或其他颜色 */
+  margin-left: 8px;
+}
+.option-container {
+  margin-left: auto;
+  transition: all 0.3s;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+}
+.app-card:hover .option-container {
+  opacity: 1;
+}
+
+/* 添加分类=========================== */
+.add-class-pop {
+  padding: 24px;
+  width: 320px;
+}
+
+.add-class-pop .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-class-pop .header-title {
+  font-weight: 500;
+  font-size: 18px;
+  color: #121e3a;
+}
+
+.add-class-pop .close-icon {
+  cursor: pointer;
+}
+
+.add-class-pop .input {
+  margin: 16px 0;
+  background: rgba(242, 244, 246, 0.5);
+  border: none;
+}
+
+.add-class-pop .actions {
+  text-align: right;
+}
+
+.add-class-pop .actions .primary-btn {
+  margin-left: 12px;
+}
+
+/* 添加类型下拉菜单样式 */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+/* 管理标签 */
+.manage-tag-item {
+  display: inline-block;
+  border-radius: 8px;
+  border: 1px solid #dddfe4;
+  display: flex;
+  align-items: center;
+  padding: 7px 8px;
+  /* height: 32px; */
+  font-size: 12px;
+  color: #364052;
+}
+
+.tag-edit-icon {
+  margin-left: 8px;
+  width: 14px;
+  cursor: pointer;
+  color: #666e82;
+}
+
+.delete-icon {
+  margin-left: 8px;
+  width: 14px;
+  height: 14px;
+  background-image: url("/application/delete_icon.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.delete-icon:hover {
+  background-image: url("/application/delete_icon_active.svg");
+  background-color: #f2f4f6;
+}
+.app-list_empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.tab-button {
+  border-radius: 8px 8px 8px 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  height: 32px;
+  background: transparent !important;
+  color: #666e82 !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition: all 0.3s;
+}
+.tab-button.active {
+  background: rgba(55, 114, 254, 0.1) !important;
+  color: #3772fe !important;
+}
+
+/* 右侧筛选 */
+.content-right {
+  padding-left: 4px;
+  display: flex;
+  flex-direction: column;
+  color: #364052;
+}
+.filter_button {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 8px 8px 8px 8px;
+  border: 1px solid #dbe2ea;
+
+  padding: 12px;
+  margin-left: 4px;
+}
+
+.filter_content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.filter_icon {
+  width: 14px;
+  height: 14px;
+}
+.clean_icon {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.filter_list {
+  flex: 1;
+}
+
+.filter_button_fold {
+  height: 36px !important;
+  width: 36px !important;
+}
+.model_type_pre {
+  height: 20px;
+  line-height: 20px;
+  background: rgba(55, 135, 254, 0.06);
+  border-radius: 4px 4px 4px 4px;
+  border: 1px solid rgba(55, 135, 254, 0.24);
+  font-size: 12px;
+  color: #3772fe;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+}
+.model_type_algo {
+  height: 20px;
+  line-height: 20px;
+  background: rgba(241, 240, 249, 0.5);
+  border-radius: 4px 4px 4px 4px;
+  border: 1px solid #ddd9fc;
+  font-size: 12px;
+  color: #7868d4;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+}
+.model_icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 2px;
+}
+.card_bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.model_classify {
+  height: 20px;
+  line-height: 20px;
+  border-radius: 4px 4px 4px 4px;
+  border: 1px solid #dbe2ea;
+  font-size: 12px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  color: #666e82;
+}
+.card_bottom_left {
+  display: flex;
+  gap: 4px;
+}
+.card-author {
+  display: flex;
+  font-size: 12px;
+  color: #8d96a7;
+  align-items: center;
+}
+.check_button{
+  position: absolute !important;
+  width: 90%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 16px;
+  opacity: 0;
+}
+.app-card:hover .check_button{
+  opacity: 1;
+}

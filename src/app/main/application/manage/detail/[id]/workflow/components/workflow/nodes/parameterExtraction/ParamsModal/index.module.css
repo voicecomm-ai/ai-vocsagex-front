@@ -1,0 +1,28 @@
+.params_container {
+  display: flex;
+  flex-direction: column;
+}
+.params_title {
+  font-size: 18px;
+  color: #121e3a;
+  margin-bottom: 24px;
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 500;
+}
+
+.params_footer {
+  text-align: right;
+  margin-top: 32px;
+}
+.params_add_btn {
+  margin-left: 12px;
+}
+.params_form :global(.ant-form-item) {
+  margin-bottom: 16px;
+}
+.params_input:global(.ant-input-filled) {
+  background: #F5F9FC !important;
+}
+.params_select :global(.ant-select-selector) {
+  background: #F5F9FC !important;
+}

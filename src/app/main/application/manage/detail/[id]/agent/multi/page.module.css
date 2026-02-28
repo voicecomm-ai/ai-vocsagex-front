@@ -1,0 +1,643 @@
+
+.multi_agent_container {
+  height: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.multi_agent_container_content{
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+.multi_agent_container_content_left{
+  flex: 1;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.multi_agent_container_content_right{
+  flex: 1;
+  height: 100%;
+background: #F5F9FC;
+}
+.multi_agent_container_left_header{
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.multi_agent_container_left_header_title{
+font-weight: normal;
+font-size: 18px;
+color: #101A28;
+line-height: 36px;
+}
+.multi_agent_container_left_header_right{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cooperation_model{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cooperation_model_img{
+  width: 16px;
+  height: 16px;
+}
+.cooperation_model_text{
+  font-weight: normal;
+font-size: 14px;
+color: #364052;
+}
+.cooperation_model_select{
+    width: 150px;
+border-radius: 8px 8px 8px 8px;
+border: 1px solid rgba(55,114,254,0.3);
+}
+.model_select{
+  width: 335px;
+}
+.multi_agent_memory{
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+.multi_agent_memory_text{
+height: 22px;
+font-weight: normal;
+font-size: 16px;
+color: #364052;
+margin-bottom: 16px;
+}
+
+.agent_long_memory_content_body{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+}
+.agent_long_memory_content_body_left{
+  height: 100px;
+background: #FAFCFD;
+  border-radius: 12px;
+  border: 0.5px solid #DDDFE4;
+  flex: 1;
+  padding: 0 12px 12px 12px;
+  display: flex;
+  flex-direction: column;
+}
+.agent_long_memory_content_body_right{
+  max-height: 100px;
+background: #FAFCFD;
+  border-radius: 12px;
+  border: 0.5px solid #DDDFE4;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 记忆部分标题 */
+.memory_section_title {
+  font-size: 14px;
+  color: #364052;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.left_tab_item_active{
+  border-bottom: 0.5px solid #DDDFE4!important;
+}
+.left_tab_item_active:hover{
+  background: #F5F9FC!important;
+ border-radius: 8px;
+  border-bottom: 0.5px solid #DDDFE4!important;
+ 
+ 
+}
+.left_tab_item_noborder{
+  border: none!important;
+}
+.left_tab_item_border{
+  border-bottom: 0.5px solid #DDDFE4!important;
+}
+/* 长期记忆头部 */
+.memory_section_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+}
+.info_img{
+  width: 21px;
+  height: 21px;
+}
+.memory_help_icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #E5E7EB;
+  color: #6B7280;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: help;
+}
+
+.memory_switch {
+  margin-left: auto;
+}
+
+/* 输入组 */
+.memory_input_group {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.memory_number_input {
+  width: 108px!important;
+  height: 36px!important;
+  background: rgba(255,255,255,0.6);
+  border-radius: 8px 8px 8px 8px;
+  border: 1px solid #DDDFE4;
+}
+
+.memory_number_input .ant-input-number-input {
+  height: 26px !important;
+  font-size: 12px !important;
+  text-align: center !important;
+}
+
+.memory_unit {
+  font-size: 12px;
+  color: #6B7280;
+  white-space: nowrap;
+}
+
+/* 微调器 */
+.memory_spinner {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.spinner_arrow {
+  width: 16px;
+  height: 12px;
+  background: #F3F4F6;
+  border: 1px solid #D1D5DB;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  color: #6B7280;
+  cursor: pointer;
+  user-select: none;
+}
+
+.spinner_arrow:hover {
+  background: #E5E7EB;
+}
+
+/* 滑块容器 */
+.memory_slider_container {
+  flex: 1;
+  margin-left: 8px;
+}
+
+/* 过期选项 */
+.memory_expiration_options {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  flex: 1;
+  padding-bottom: 12px;
+  align-items: center;
+}
+.memory_input_group_custom{
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.memory_option_btn {
+  padding: 4px 8px;
+  border: 1px solid #D1D5DB;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.6);
+  color: #6B7280;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  align-self: flex-start;
+  margin-right: 8px;
+}
+
+.memory_option_btn:hover {
+  background: #F3F4F6;
+}
+
+
+
+
+/* 长期记忆选项按钮组 */
+.memory_option_buttons {
+  width: 160px;
+  height: 36px;
+background: #F5F9FC;
+  border-radius: 8px;
+  border: 0.5px solid #DBE2EA;
+  display: flex;
+   padding: 2px;
+  gap: 4px;
+}
+
+.memory_option_buttons_item {
+  flex: 1;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  font-size: 14px;
+  color: #666E82;
+  cursor: pointer;
+}
+.memory_option_btn_active{
+  background: #FFFFFF!important;
+border-radius: 6px!important;
+color: #3772FE!important;
+  border: 0.5px solid #DBE2EA;
+}
+
+
+/* 确保滑块在容器中正确显示 */
+.memory_slider_container {
+  position: relative;
+}
+
+/* 微调滑块样式以匹配设计 */
+.memory_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #3B82F6;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.memory_slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #3B82F6;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.expanded {
+  transform: rotate(0deg)!important;
+}
+
+.track_step_expand{
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  transform: rotate(270deg);
+}
+
+.multi_child_agent{
+  margin-top: 24px;
+  display: flex ;
+  flex-direction: column;
+  padding: 0 20px;
+  flex: 1;
+  overflow: hidden;
+}
+.multi_child_agent_header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 22px;
+}
+.multi_child_agent_title{
+  font-size: 14px;
+  color: #364052;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.multi_child_agent_title_name{
+font-weight: normal;
+font-size: 16px;
+color: #364052;
+line-height: 16px;
+}
+.multi_child_agent_title_page{
+  font-weight: normal;
+font-size: 14px;
+color: #666E82;
+line-height: 16px;
+}
+.sub_add{
+  width: 12px;
+  height: 12px;
+}
+.multi_child_agent_add_btn{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: normal;
+font-size: 14px;
+color: #3772FE;
+cursor: pointer;
+}
+.multi_child_agent_list{
+  flex: 1;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: auto;
+  /* 隐藏滚动条 */
+  scrollbar-width: none; /* Firefox */
+  padding-bottom: 24px;
+}
+.multi_child_agent_list::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Edge */
+}
+.multi_child_agent_item{
+  flex-shrink: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #FAFCFD;
+border-radius: 12px 12px 12px 12px;
+border: 1px solid #DDDFE4;
+}
+
+.agent_mcp_item{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 72px;
+  background: #F8FAFB;
+  border-radius: 8px 8px 8px 8px;
+  border: 0.5px solid #DDDFE4;
+  padding: 0 16px;
+}
+.agent_mcp_item:hover{
+  background: #F5F9FC;
+  box-shadow: 0px 1px 4px 0px rgba(54,64,82,0.1);
+  border-radius: 8px 8px 8px 8px;
+  border: 1px solid #DDDFE4;
+}
+.agent_mcp_item_left{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  overflow: hidden;
+}
+.agent_mcp_item_left_icon_img{
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+
+}
+.agent_mcp_item_left_content{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 0;
+  overflow: hidden;
+}
+.agent_mcp_item_left_content_desc{
+  font-weight: normal;
+font-size: 12px;
+color: #8D96A7;
+}
+.agent_mcp_item_left_content_name{
+   display: flex;
+  gap: 8px;
+}
+.agent_mcp_item_left_content_name_text{
+  font-weight: normal;
+  font-size: 14px;
+  color: #364052;
+ 
+}
+.agent_mcp_item_left_content_desc_text{
+  max-width: 800px;
+}
+.agent_mcp_item_left_content_top{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.agent_variable_item_btn{
+  width: 24px;
+height: 24px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.agent_variable_item_btn:hover{
+  background: rgba(238,90,85,0.1);
+  border-radius: 5px 5px 5px 5px; 
+}
+.agent_variable_item_btn > img {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.agent_mcp_item_left_content_tag_integrated_img{
+  width: 41px;
+  height: 21px;
+}
+.sub_agent_select_container{
+  height: 742px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-image: url("/application/release_bg.png");
+  border-radius: 24px;
+  background-color: #fff!important;
+  background-position: top center!important;
+  background-repeat: no-repeat!important;
+  background-size: 100% auto!important;
+  padding: 24px  32px;
+}
+.my-modal-content {
+  padding: 0px !important;
+  border-radius: 24px !important;
+}
+.sub_agent_select_container_header{
+  height: 36px;
+  display: flex;
+ align-items: center;
+ justify-content: space-between;
+ margin-bottom: 24px;
+}
+.sub_agent_select_container_header_title{
+font-size: 24px;
+color: #132F64;
+line-height: 36px;
+font-weight: 500;
+}
+.sub_agent_select_container_search{
+  height: 36px;
+background: rgba(255,255,255,0.6);
+border-radius: 8px 8px 8px 8px;
+border: 1px solid #DDDFE4;
+margin-bottom: 16px;
+}
+.sub_agent_select_container_content{
+  flex: 1;
+  display: flex ;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  /* 隐藏滚动条 */
+  scrollbar-width: none; /* Firefox */
+}
+.sub_agent_select_container_content::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Edge */
+}
+.sub_agent_select_item{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+background: #F8FAFB;
+border-radius: 12px 12px 12px 12px;
+border: 0.5px solid #DDDFE4;
+  cursor: pointer;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.sub_agent_select_item_content{
+  flex: 1;
+  overflow: hidden;
+}
+
+.sub_agent_select_item_active{
+  background: rgba(55,114,254,0.05);
+border-radius: 12px 12px 12px 12px;
+border: 1px solid rgba(55,114,254,0.6);
+}
+.sub_agent_select_item_img{
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+}
+.sub_agent_select_container_footer{
+  padding-top: 6px;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+.sub_agent_select_container_footer_btn{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.sub_agent_select_container_footer_num{
+  font-weight: normal;
+font-size: 14px;
+color: #666E82;
+line-height: 16px;
+display: flex;
+align-items: center;
+gap: 4px;
+} 
+.sub_agent_select_container_footer_num>img{
+  width: 14px;
+  height: 14px;
+}
+.sub_agent_select_container_footer_num>span{
+  font-weight: normal;
+font-size: 14px;
+color: #364052;
+line-height: 16px;
+}
+.sub_agent_cancel{
+  width: 112px;
+height: 40px!important;
+
+border-radius: 12px 12px 12px 12px;
+border: 1px solid #DDDFE4;
+}
+.sub_agent_save{
+  width: 112px;
+height: 40px!important;
+
+border-radius: 12px 12px 12px 12px;
+border: 1px solid #DDDFE4;
+}
+.sub_agent_select_container_header_close>img{
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.multi_agent_container_content_right{
+  display: flex;
+  
+}
+.multi_child_agent_list_empty{
+flex: 1;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+}
+.multi_child_agent_list_empty_img{
+  width: 120px;
+  height: 120px;
+}
+.multi_child_agent_list_empty_text{
+  font-weight: normal;
+font-size: 14px;
+color: #8D96A7;
+line-height: 16px;
+}
+
+.multi_child_agent_add_btn_disabled{
+  font-weight: normal;
+font-size: 14px;
+color: #8D96A7!important;
+cursor: not-allowed!important;
+}
+.multi_child_agent_add_btn_disabled>img{
+  filter: grayscale(100%) !important;
+  opacity: 0.6!important;
+}

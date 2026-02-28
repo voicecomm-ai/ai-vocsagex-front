@@ -1,0 +1,219 @@
+
+.agent_node{
+  background:  linear-gradient( 360deg, rgba(55,114,254,0) 0%, rgba(55,114,254,0.06) 100%)no-repeat,#FFFFFF!important;
+
+  background-size: 100% 55px;
+  background-position: top;
+}
+.custom_node_header_tag{
+
+  max-width: 80px;
+  height: 20px;
+  border-radius: 4px;
+border: 1px solid #DDDFE4;
+font-weight: normal;
+font-size: 12px;
+color: #60687D;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 0 6px;
+overflow: hidden;
+}
+.custom_node_header_tag_text{
+  font-weight: normal;
+  font-size: 12px;
+  color: #60687D; 
+}
+.custom_node_header_tag_add{
+  font-weight: normal;
+  font-size: 12px;
+  color: #60687D; 
+}
+.agent_panel_output{
+
+  display: flex;
+  flex-direction: column;
+
+}
+.agent_panel_output_title{
+  height: 40px;
+  font-weight: normal;
+  font-size: 14px;
+  color: #364052;
+  line-height: 40px;
+}
+
+.agent_panel_output_main{
+  height: 54px;
+background: linear-gradient( 90deg, rgba(242,244,246,0.5) 0%, rgba(250,250,251,0) 100%);
+border-radius: 0px 0px 0px 0px;
+display: flex;
+flex-direction: column;
+gap: 8px;
+justify-content: center;
+padding:  0 6px;
+}
+  .agent_panel_output_main_item{
+  display: flex;
+  gap: 3px;
+}
+
+
+
+
+.workflow_panel_output_title{
+  height: 40px;
+  font-weight: normal;
+  font-size: 14px;
+  color: #364052;
+  line-height: 40px;
+}
+
+.workflow_panel_output_main{
+  height: 54px;
+background: linear-gradient( 90deg, rgba(242,244,246,0.5) 0%, rgba(250,250,251,0) 100%);
+border-radius: 0px 0px 0px 0px;
+display: flex;
+flex-direction: column;
+gap: 8px;
+justify-content: center;
+padding:  0 6px;
+}
+  .workflow_panel_output_main_item{
+  display: flex;
+  gap: 3px;
+}
+
+
+.mcp_param_list{
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap:6px;
+
+  overflow: auto;
+}
+.mcp_param_list_item{
+  display: flex;
+
+  gap:6px;
+
+}
+
+.mcp_param_list_item_title{
+  margin-left: 12px;
+  height: 20px;
+  align-items: center;
+}
+.mcp_para_list_item_name_title{
+  width: 90px;
+  font-size: 12px;
+  color: #666E82;
+  text-align: left;
+  padding-left: 4px;
+
+}
+.mcp_para_list_item_citation_title{
+  width: 80px;
+  font-size: 12px;
+  color: #666E82;
+  text-align: left;
+  padding-left: 8px;
+}
+.mcp_para_list_item_value_title{
+    flex: 1;
+    font-size: 12px;
+color: #666E82;
+text-align: left;
+padding-left: 6px;  
+}
+.mcp_para_list_item_name{
+  width: 90px;
+height: 36px;
+background: #F5F9FC;
+
+font-size: 14px;
+color: #364052;
+ display: flex;
+ align-items: center;
+padding: 0 8px;
+border-radius: 8px;
+}
+.mcp_para_list_item_citation{
+  width: 80px;
+height: 36px;
+background: rgba(242,244,246,0.5)!important;
+border-radius: 8px;
+}
+.mcp_para_list_item_citation_select{
+  width:80px;
+  background: #F5F9FC!important;
+  border-radius: 8px!important;
+ 
+
+
+}
+.mcp_input,.mcp_select{
+  height: 36px!important;
+  width: 100%!important;
+  line-height: 36px!important;
+  background: #F5F9FC!important;
+}
+.mcp_para_list_item_value{
+  flex:1;
+  background: rgba(242,244,246,0.5);
+  border-radius: 8px;
+  overflow: hidden;
+  
+}
+.mcp_para_list_item_value_input{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 4px;
+  background: #F5F9FC;
+}
+.mcp_para_list_item_value_input_left{
+  min-width: 56px;
+  background: #F5F9FC;
+  padding-left: 8px;
+
+}
+.mcp_para_list_item_value_input_right{
+  flex:1;
+  overflow: hidden;
+  background: #F5F9FC;
+border-radius: 8px 8px 8px 8px;
+}
+
+.app_panel_variable_title{
+  display: flex;
+  align-items: center;
+}
+.agent_node_input{
+  height: 36px;
+  display: flex;
+  margin-left: 6px;
+
+ 
+
+  margin-bottom: 12px;
+}
+
+.agent_node_input_content{
+  flex:1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 8px;
+  
+}
+
+.span_required {
+  width: 3px;
+  color: #ff4d4f;
+  
+}

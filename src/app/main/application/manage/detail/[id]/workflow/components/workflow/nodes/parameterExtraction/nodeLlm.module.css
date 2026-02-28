@@ -1,0 +1,109 @@
+.custom_node {
+  width: 320px;
+  background: #ffffff;
+  border-radius: 9px 9px 9px 9px;
+  padding: 12px;
+  border: 1px solid #e5e5e5;
+  position: relative;
+}
+.custom_node:hover {
+  border: 2px solid #3772fe;
+}
+.custom_node_header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  color: #364052;
+}
+.custom_node_header_title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 320px;
+}
+
+.custom_node_actions {
+  position: absolute;
+  top: -36px;
+  right: 0px;
+}
+.operator_content {
+  width: 60px;
+  height: 32px;
+  background: #ffffff;
+  box-shadow: 2px 3px 12px 0px rgba(102, 110, 130, 0.2);
+  border-radius: 8px 8px 8px 8px;
+  padding: 4px;
+}
+.operator_contenticon {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.custom_node_header_icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.operator_content_popover {
+  width: 120px;
+  background: #ffffff;
+  box-shadow: 2px 2px 12px 0px rgba(102, 110, 130, 0.2);
+  border-radius: 8px 8px 8px 8px;
+  padding: 4px;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.operator_content_popover_item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  width: 96px;
+  padding: 0 12px;
+  height: 32px;
+}
+.operator_content_popover_item:hover {
+  background: #f2f4f6;
+  border-radius: 4px 4px 4px 4px;
+}
+.operator_content_popover_item_img {
+  width: 16px;
+  height: 16px;
+}
+.operator_content_popover_item_name {
+  font-size: 14px;
+  color: #101a28;
+}
+
+
+.custom_node_filecon_desc {
+  width: 100%;
+  max-height: 140px;
+}
+.custom_node_filecon_desctxt {
+  width: 100%;
+  max-height: 30px;
+  padding-top: 8px;
+  padding-left: 6px;
+  display: flex;
+  align-items: center;
+  font-family: Alibaba PuHuiTi 3.0, Alibaba PuHuiTi 30;
+  font-weight: normal;
+  font-size: 16px;
+  color: #364052;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+}

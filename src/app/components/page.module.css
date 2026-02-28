@@ -1,0 +1,204 @@
+
+.popover_content{
+  /* background-color: #666E82; */
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 240px;
+}
+.avatar_container{
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.popover_content_header{
+
+
+}
+
+.popover_content_user{
+  width: 240px;
+  background-image: url('/layout/header_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 48px;
+  flex: 1;
+  position: relative;
+
+}
+.popover_content_user_content{
+
+  position: absolute;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  padding: 0 12px ;
+  min-height: 64px;
+}
+.popover_content_user_avatar{
+  width: 24px;
+}
+.popover_content_userName{
+  flex: 1;
+  margin-left: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #101A28;
+ 
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  
+}
+.popover_content_Paragraph{
+margin-bottom: 0px!important;
+}
+
+.ant-popover-inner{
+  padding: 0!important;
+}
+.popover_content_item{
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  
+  width: 210px;
+height: 40px;
+cursor: pointer;
+background: rgba(255,255,255,0);
+}
+.popover_content_item_content{
+  flex: 1;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}
+.popover_content_item_right{
+ width: 16px;
+ 
+}
+.popover_content_item_logout{
+  margin: 0 12px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  width: 210px;
+height: 40px;
+cursor: pointer;
+background: rgba(255,255,255,0); 
+border-top: 1px solid #E0E6ED;
+}
+.popover_content_item_logo{
+width: 16px;
+height: 16px;
+margin-right: 8px;
+}
+
+/* 修改密码 */
+.update_pwd_container{
+  height: 350px;
+background-image: url('/layout/pwd_bg.png');
+background-size: cover;
+background-repeat: no-repeat; /* 防止背景图重复 */
+background-position: center; /* 背景图居中显示 */
+border-radius: 24px!important;
+}
+.userInfo_container{
+  height: 525px;
+  background-image: url('/layout/pwd_bg.png');
+  background-size: cover;
+  background-repeat: no-repeat; /* 防止背景图重复 */
+  background-position: center; /* 背景图居中显示 */
+  border-radius: 24px!important; 
+}
+.my-modal-content{
+  padding: 0px!important;
+  border-radius: 24px!important;
+}
+.model_header{
+display: flex;
+display: -webkit-flex;
+justify-content: space-between;
+
+
+
+}
+.model_header_title{
+  padding: 32px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #101A28;
+  line-height: 36px;
+}
+.model_header_close_img{
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  padding: 32px;
+}
+.model_footer{
+
+  margin-top: 32px;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: flex-end;
+  gap: 32px;
+  padding: 0 52px;
+}
+.model_footer_btn{
+  width: 112px;
+height: 40px!important;
+
+border-radius: 12px!important;
+border: 1px solid #DDDFE4;
+}
+/* 删除 */
+.delete_container{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  height: 325px;
+}
+.delete_container_content{
+  flex: 1;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+}
+.delete_container_content_img{
+  width: 120px;
+  height: 120px;
+}
+.delete_container_content_title{
+  font-weight: 400;
+  font-size: 22px;
+  color: #364052;
+  line-height: 32px;
+  word-break: break-all;
+  padding:0 16px;
+}
+.delete_container_content_tip{
+  font-weight: 400;
+  font-size: 14px;
+  color: #666E82;
+  line-height: 20px;
+  padding: 0 32px;
+}
+.delete_container_footer{
+  margin-bottom: 32px;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  gap: 32px;
+  
+}
+.avatar_container{
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}

@@ -1,0 +1,229 @@
+
+/* 追踪面板样式 */
+.track_step_card {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #E8E8E8;
+  border-radius: 12px;
+  padding:8px;
+  transition: all 0.3s ease;
+}
+
+.track_step_card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #D0D0D0;
+}
+
+.track_step_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.track_step_left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.track_step_number {
+  width: 20px;
+  height: 20px;
+  background: #F0F0F0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: #666E82;
+  flex-shrink: 0;
+}
+
+.track_step_icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.track_step_name {
+  font-weight: 500;
+  font-size: 14px;
+  color: #364052;
+  line-height: 20px;
+}
+
+.track_step_right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.track_step_tokens {
+  font-weight: 400;
+  font-size: 12px;
+  color: #666E82;
+ 
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.track_step_duration_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.track_step_duration {
+  font-weight: 400;
+  font-size: 12px;
+  color: #666E82;
+}
+
+.track_step_running_text {
+  font-weight: 400;
+  font-size: 10px;
+  color: #1890FF;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.track_step_status {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.track_step_expand {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.track_step_expand.expanded {
+  transform: rotate(180deg);
+}
+
+.track_step_content {
+  margin-top: 12px;
+}
+
+/* 运行状态特殊样式 */
+.track_step_card.running {
+  border-color: #1890FF;
+  background: rgba(24, 144, 255, 0.02);
+}
+
+.track_step_card.failed {
+  border-color: #FF4D4F;
+  background: rgba(255, 77, 79, 0.02);
+}
+
+.track_step_card.success {
+  border-color: #52C41A;
+  background: rgba(82, 196, 26, 0.02);
+}
+
+/* 运行状态动画 */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.track_step_status.running {
+  animation: spin 1s linear infinite;
+}
+
+.running {
+
+  font-weight: 500;
+  font-size: 12px;
+  color: #3772FE;
+}
+
+.succeeded {
+  background: rgba(50,187,123,0.15);
+  font-weight: 500;
+  font-size: 12px;
+  color: #1CA967;
+  border: 1px solid rgba(50,187,123,0.4);
+}
+
+.failed {
+  background: rgba(238,90,85,0.15);
+  border: 1px solid rgba(238,90,85,0.4);
+  font-weight: 500;
+  font-size: 12px;
+  color: #CC372B;
+}
+
+.run_panel_result_error{
+  height: 28px;
+background: rgba(238,90,85,0.08);
+border-radius: 8px;
+border: 1px solid rgba(238,90,85,0.2);
+
+display: flex;
+align-items: center;
+padding: 8px;
+gap: 8px;
+margin-bottom: 8px;
+}
+.run_panel_result_error_left{
+width: 14px;
+height: 14px;
+}
+.run_panel_result_error_right{
+  flex: 1;
+  font-size: 12px;
+color: #CC372B;
+}
+
+.run_panel_result_error_right_text{
+  font-size: 12px;
+  color: #CC372B;
+}
+
+.run_tooltip_content{
+  padding: 6px;
+  max-height: 500px;
+  overflow-y: auto;
+  /* 优化滚动条样式 */
+  scrollbar-width: thin;
+  scrollbar-color: #c1c7d0 #f4f5f7;
+}
+.run_tooltip_content::-webkit-scrollbar {
+  width: 3px;
+ 
+}
+.run_tooltip_content::-webkit-scrollbar-thumb {
+  background: #c1c7d0;
+  border-radius: 3px;
+}
+.run_tooltip_content::-webkit-scrollbar-thumb:hover {
+  background: #b0b6c1;
+}
+.loop_header{
+ padding: 8px;
+background: #F5F9FC;
+border-radius: 8px 8px 8px 8px;
+border: 1px solid #DDDFE4;
+margin-bottom: 8px;
+}

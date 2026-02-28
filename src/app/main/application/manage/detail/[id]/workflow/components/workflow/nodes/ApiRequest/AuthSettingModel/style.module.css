@@ -1,0 +1,101 @@
+.knowledge_select_container{
+  width: 465px;
+  height: 568px;
+  background: #FFFFFF;
+  box-shadow: 2px 2px 16px 0px rgba(18,30,58,0.16);
+  border-radius: 16px;
+  border: 1px solid #DDDDDD;
+  display: flex;
+  display:-webkit-flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.knowledge_select_container_header{
+  /* padding:24px 0 16px 32px; */
+  margin-bottom: 18px;
+  font-weight: 500;
+font-size: 18px;
+color: #121E3A;
+}
+.knowledge_select_container_content{
+  flex:1;
+  display: flex;
+  display:-webkit-flex;
+  flex-direction: column;
+  /* padding:0 32px; */
+  gap:4px;
+  overflow-y: auto;
+
+}
+.span_required{
+  color: #EE5A55;
+}
+.knowledge_select_container_footer{
+  height:63px;
+  display:flex;
+  justify-content: end;
+  /* padding:0 32px 32px 24px; */
+  align-items: flex-end; /* 子元素底部对齐 */
+
+}
+
+.knowledge_select_container_footer_btn{
+  display: flex;
+  gap: 12px;
+}
+.knowledge_cancel{
+  font-weight: 500;
+  font-size: 14px;
+  color: #364052;
+}
+.knowledge_save{
+  background: #3772FE;
+  font-weight: 500;
+font-size: 14px;
+color: #FFFFFF;
+}
+
+.auth_type_wrap{
+    /* display: flex;
+    align-items: center;
+justify-content: space-between; */
+width: 100%;
+margin-bottom: 18px;
+}
+
+.auth_type_label{
+  color: #666e82;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.auth_type_item{
+    text-align: center;
+    line-height: 36px;
+    /* width: 50%; */
+    width: 136px;
+height: 36px;
+color: #666E82;
+font-size: 13px;
+background: rgba(242,244,246,0.5);
+border-radius: 8px 8px 8px 8px;
+}
+
+.auth_type_item_active{
+    border: 1px solid #3772FE;
+    text-align: center;
+    line-height: 36px;
+    width: 136px;
+height: 36px;
+font-size: 13px;
+color: #364052;
+background: rgba(55,114,254,0.05);
+border-radius: 8px 8px 8px 8px;
+border: 1px solid #3772FE;
+}
+
+.display{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

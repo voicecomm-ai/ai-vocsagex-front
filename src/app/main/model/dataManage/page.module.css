@@ -1,0 +1,509 @@
+.data-manage-page {
+  padding: 32px 25px 32px;
+  height: 100%;
+  background-color: #f5f9fc;
+  display: flex;
+  flex-direction: column;
+  display: -webkit-flex;
+}
+.data-manage-page.no-second-sidebar {
+  padding-left: 10px;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  /* min-width: 800px; */
+  display: -webkit-flex;
+}
+
+.data-manage-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.data-manage-table-wrapper {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.data-manage-table-wrapper::-webkit-scrollbar {
+  width: 6px;
+}
+
+.data-manage-table-wrapper::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.footer-container {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #626675;
+  align-items: center;
+}
+
+.options-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.page-title {
+  font-weight: bold;
+  font-size: 24px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin-right: 20px;
+}
+
+.search-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.right-btn {
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.right-btn::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 28px;
+  background: #dddfe4;
+  margin-right: 8px;
+}
+
+.model_type_select_multiple :global(.ant-select-selection-wrap) {
+  height: 34px !important;
+}
+
+/* 数据管理表格 */
+.data-manage-table :global(.ant-table-thead > tr > th) {
+  background-color: transparent !important;
+}
+
+.data-manage-table :global(.ant-table) {
+  background-color: transparent;
+}
+
+.data-manage-table :global(td.ant-table-column-sort) {
+  background-color: transparent !important;
+}
+
+/* ✅ 鼠标悬浮时整行背景为白色，包括排序列 */
+.data-manage-table :global(tr.ant-table-row:hover) td {
+  background-color: #fff !important;
+  cursor: pointer;
+}
+
+/* 单元格统一高度 */
+.data-manage-table :global(.ant-table-cell) {
+  height: 48px;
+  vertical-align: middle !important;
+}
+
+/* 排序图标 */
+.data-manage-table :global(.ant-table-column-sorter-inner) {
+  margin-left: -188px !important;
+}
+.table-type-container {
+  display: flex;
+  align-items: center;
+}
+
+.table-type-icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+}
+
+.table-dataname {
+  text-decoration: underline;
+  cursor: pointer;
+  text-underline-offset: 2px;
+  margin: 0 32px 0 8px;
+}
+.table-dataname:hover {
+  color: #3772fe;
+  font-weight: bold;
+}
+
+.edit-input {
+  border: 1px solid rgba(55, 114, 254, 0.6) !important;
+  border-radius: 8px !important;
+  width: 360px !important;
+  height: 32px !important;
+}
+
+.option-wrapper {
+  display: flex;
+}
+.option-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  background-size: 16px;
+}
+
+.copy {
+  background-image: url("/model/data_upload.png");
+
+  background-size: 16px;
+  margin-right: 8px;
+}
+.delete {
+  background-image: url("/model/data_delete.png");
+  background-size: 16px;
+}
+.delete:hover {
+  background-image: url("/model/red_delete_icon.png");
+  background-color: rgba(238, 90, 85, 0.1);
+  background-size: 16px;
+}
+.copy:hover {
+  background-color: #e8eaef;
+}
+
+/* 分页 */
+.custom-pagination :global(.ant-pagination) {
+  color: #626675;
+}
+.custom-pagination :global(.ant-pagination-item) {
+  border-radius: 8px !important;
+  height: 28px;
+  width: 28px;
+  border: 1px solid #dddfe4 !important;
+  color: #626675 !important;
+}
+.custom-pagination :global(.ant-pagination-item-active) {
+  background: rgba(55, 114, 254, 0.6) !important;
+  color: #fff !important;
+}
+.custom-pagination :global(.ant-pagination-item-active a) {
+  color: #fff !important;
+}
+.custom-pagination :global(.ant-pagination-prev) {
+  border: 1px solid #dddfe4 !important;
+  background-color: #fff !important;
+  border-radius: 8px !important;
+  color: #626675 !important;
+}
+.custom-pagination :global(.ant-pagination-next) {
+  border: 1px solid #dddfe4 !important;
+  background-color: #fff !important;
+  border-radius: 8px !important;
+  color: #626675 !important;
+}
+
+.custom-pagination :global(.ant-pagination-item a) {
+  color: #626675 !important;
+}
+.custom-pagination :global(.ant-pagination-item-active a) {
+  color: #fff !important;
+}
+.custom-pagination :global(.ant-pagination-item-ellipsis) {
+  color: #626675 !important;
+}
+
+.custom-pagination :global(.ant-select-selection-item) {
+  color: #626675 !important;
+}
+
+.custom-pagination :global(.ant-pagination-options-quick-jumper) {
+  color: #626675 !important;
+}
+.custom-pagination :global(.ant-pagination-options-quick-jumper input) {
+  border-radius: 8px !important;
+  height: 30px !important;
+}
+.custom-pagination :global(.ant-select-single .ant-select-selector) {
+  border-radius: 8px !important;
+}
+
+/* 数据集drawer */
+.drawer-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.drawer-content::-webkit-scrollbar {
+  /* width: 6px; */
+  display: none;
+}
+
+/* .drawer-content::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+} */
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.drawer-title {
+  font-weight: bold;
+  font-size: 24px;
+  color: #132f64;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.directory-title-icon {
+  flex-shrink: 0;
+  padding-right: 8px;
+}
+
+.drawer-title-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.close-icon {
+  cursor: pointer;
+}
+
+/* 数据集类型选项 */
+.dataset-type-select {
+  display: flex;
+  flex-direction: column;
+}
+.dataset-type-item {
+  border: 1px solid #dbe2ea;
+  border-radius: 12px;
+  display: flex;
+  margin-bottom: 8px;
+  cursor: pointer;
+  flex-direction: column;
+  background: #fafcfd;
+  box-sizing: border-box;
+  padding: 16px 20px;
+  transition: all 0.2s ease-in-out;
+}
+.dataset-type-item > .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 32px;
+}
+.dataset-type-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+}
+.dataset-type-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #364052;
+}
+.dataset-type-desc {
+  font-size: 12px;
+  color: #666e82;
+}
+
+.selected {
+  background: rgba(55, 114, 254, 0.05);
+  border: 2px solid #3772fe;
+}
+
+.dataset-type-radio {
+  background-color: #fff;
+  border-radius: 0 0 12px 12px;
+  padding: 16px 20px 4px !important;
+  margin: 16px -20px -16px !important;
+  border-top: 1px solid #e8eaef;
+}
+
+.dataset-type-radio :global(.ant-radio-wrapper) {
+  /* margin-right: 32px !important; */
+  width: 126px;
+  margin-bottom: 12px !important;
+  color: #666e82 !important;
+}
+.dataset-type-radio :global(.ant-radio-wrapper-checked) {
+  color: #364052 !important;
+  font-weight: 500;
+}
+
+.upload-tips {
+  color: #666e82;
+  font-size: 12px;
+  /* line-height: 18px; */
+  margin: 12px 0 0;
+}
+.upload-tips-bottom {
+  color: #666e82;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.api-upload-container {
+  height: 200px;
+  background: #fafcfd;
+  border-radius: 8px;
+  border: 1px dashed #dddfe4;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4px;
+}
+.api-upload-title {
+  font-size: 14px;
+  color: #364052;
+  margin: 12px 0 14px;
+  width: 480px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.loading-avatar {
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+}
+
+.upload-dragger :global(.ant-upload-drag) {
+  height: 200px !important;
+  background-color: #fafcfd !important;
+}
+.upload-dragger :global(.ant-upload-drag:hover) {
+  border-color: #d9d9d9 !important;
+  border-radius: 16px;
+}
+.reupload-btn {
+  background: rgba(55, 114, 254, 0.1) !important;
+  width: 80px !important;
+  height: 24px !important;
+  color: #3772fe !important;
+  border-radius: 8px !important;
+  border: none !important;
+  font-size: 12px !important;
+}
+
+/* 文件目录抽屉样式 */
+.drawer-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.file-drawer-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.table-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 8px;
+}
+
+.table-wrapper::-webkit-scrollbar {
+  width: 6px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.directory-pagination :global(.ant-pagination-item-active) {
+  background: rgba(55, 114, 254, 0.6) !important;
+}
+.directory-pagination :global(.ant-pagination-item) {
+  color: #626675 !important;
+  border: none !important;
+}
+.directory-pagination :global(.ant-pagination-item a) {
+  color: #626675 !important;
+}
+.directory-pagination :global(.ant-pagination-item-active a) {
+  color: #fff !important;
+}
+.directory-pagination :global(.ant-pagination-item-ellipsis) {
+  color: #626675 !important;
+  font-size: 12px !important;
+}
+.directory-pagination :global(.ant-select-selection-item) {
+  color: #626675 !important;
+}
+.directory-pagination :global(.ant-pagination-options-quick-jumper) {
+  color: #626675 !important;
+}
+.directory-pagination :global(.ant-pagination-options-quick-jumper input) {
+  height: 22px !important;
+  width: 32px !important;
+}
+
+.directory-table :global(.ant-table-thead > tr > th) {
+  background-color: transparent !important;
+}
+
+.directory-table :global(.ant-table) {
+  background-color: transparent;
+}
+
+.directory-table :global(td.ant-table-column-sort) {
+  background-color: transparent !important;
+}
+
+/* ✅ 鼠标悬浮时整行背景为白色，包括排序列 */
+.directory-table :global(tr.ant-table-row:hover) td {
+  background-color: transparent !important;
+}
+
+/* 单元格统一高度 */
+.directory-table :global(.ant-table-cell) {
+  height: 48px;
+  vertical-align: middle !important;
+}
+
+/* 文件名称溢出显示 */
+.table-type-container {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+
+.two-line-ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  white-space: normal;
+}
+/* 上传进度条 */
+.progress-bar :global(.ant-progress-text) {
+  color: rgba(55, 114, 254, 1) !important;
+  font-size: 12px;
+}
+.progress-bar :global(.ant-progress-inner) {
+  border: 1px solid #DBE2EA;
+}

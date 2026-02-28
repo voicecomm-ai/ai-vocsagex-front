@@ -1,0 +1,175 @@
+/* 测边弹框样式 */
+.apiKey-drawer-header{
+  display: none!important;
+}
+.apiKey-drawer-content{
+  background: #FFFFFF;
+
+  border-radius: 20px 0 0 20px;
+}
+.apiKey-drawer-body{
+  padding: 0!important;
+  display: flex;
+  overflow: hidden!important;
+}
+.apiKey_container{
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 标题样式 */
+.apiKey_header{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32px;
+  height: 60px;
+}
+.apiKey_header_left{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.apiKey_title{
+  font-weight: normal;
+  font-size: 24px;
+  color: #101A28;
+}
+.apiKey_header_right>img{
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+/* 提示信息样式 */
+.apiKey_tips{
+  margin-top: 4px;
+  font-weight: normal;
+  font-size: 14px;
+  color: #666E82;
+}
+
+/* 创建按钮样式 */
+.apiKey_create_btn{
+  width: 160px;
+  border-radius: 8px !important;
+  height: 40px !important;
+  background-color: #4070fd !important;
+}
+ 
+.apiKey_create_btn_container{
+  padding: 0 32px;
+}
+/* 表格容器样式 */
+.apiKey_table_container{
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
+  padding: 0 32px;
+}
+
+
+/* 操作按钮样式 */
+.option-wrapper{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.option-btn{
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  background-size: 16px;
+  transition: background-color 0.2s;
+}
+.option-btn.copy{
+  background-image: url("/model/api_copy.png");
+}
+.option-btn.copy:hover{
+  background-color: #e8eaef;
+}
+.option-btn.delete{
+  background-image: url("/model/delete_icon.svg");
+}
+.option-btn.delete:hover{
+  background-image: url("/model/red_delete_icon.png");
+  background-color: rgba(238, 90, 85, 0.1);
+}
+.option-btn-disabled{
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.option-btn-disabled:hover {
+  background-color: unset !important;
+  background-image: unset !important;
+}
+
+.create_api_key_modal_content{
+  padding: 0!important;
+  background: #FFFFFF;
+
+border-radius: 16px 16px 16px 16px!important;
+}
+
+.create_api_key_modal{
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 209px;
+  box-sizing: border-box;
+}
+.create_api_key_modal_title{
+  font-weight: normal;
+  font-size: 18px;
+  color: #364052;
+  height: 25px;
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.create_api_key_modal_title_close{
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.create_api_key_modal_desc{
+  font-weight: normal;
+font-size: 14px;
+color: #666E82;
+height: 20px;
+line-height: 20px;
+margin-bottom: 16px;
+}
+.create_api_key_modal_center{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ width: 432px;
+ height: 40px;
+ background: #F5F9FC;
+ border-radius: 8px 8px 8px 8px;
+ padding: 0 12px;
+
+}
+.create_api_key_modal_footer{
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+.create_api_key_modal_center_text{
+  font-weight: normal;
+font-size: 14px;
+color: #666E82;
+}

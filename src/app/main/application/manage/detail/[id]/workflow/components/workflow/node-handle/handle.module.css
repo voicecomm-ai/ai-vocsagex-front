@@ -1,0 +1,105 @@
+.customHandleSourceContent {
+  width: 16px;
+  height: 16px;
+  background: #3772FE;
+  background-image: url('/workflow/line_add.png');
+  /* Tailwind 蓝色，可以换成你想要的蓝色 */
+  position: absolute;
+  top: 50%;
+  right: -9px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  border: none;
+
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+
+.customHandleTarget,.customHandleTargetLink {
+  width: 16px;
+  height: 16px;
+  background: #3772FE;
+  background-image: url('/workflow/line_add.png');
+  /* Tailwind 蓝色，可以换成你想要的蓝色 */
+  position: absolute;
+  top: 50%;
+  left: -9px;
+  /* 向左偏移一半宽度 */
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  border-radius: 50%;
+
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* 可选，用于更好显示在白色背景上 */
+}
+
+
+.sourceHandleHidden {
+  width: 8px;
+  height: 8px;
+  background: #3772FE;
+  border-radius: 0px 0px 0px 0px;
+  border: 1px solid #FFFFFF;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  right: -4px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease-in-out;
+}
+.targetHandleHidden {
+  width: 8px;
+  height: 8px;
+  background: #3772FE;
+  border-radius: 0px 0px 0px 0px;
+  border: 1px solid #FFFFFF;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: -4px;
+  transform: translateY(-50%); 
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease-in-out;
+}
+
+.classesSourceHandleHidden{
+  width: 8px;
+  height: 8px;
+  background: #3772FE;
+  border-radius: 0px 0px 0px 0px;
+  border: 1px solid #FFFFFF;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  right: -16px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease-in-out;
+}
+
+.classesHandleSource {
+  width: 16px ;
+  height: 16px ;
+  border-radius: 50%;
+  background-color: #3772fe;
+  background-image: url('/workflow/line_add.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: -12px;
+}

@@ -1,0 +1,160 @@
+/* 召回设置弹窗样式 */
+.recallsettingsmodel_con {
+  width: 100%;
+}
+.recallsettingsmodel_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.recallsettingsmodel_header_zhsz {
+  width: 100%;
+}
+.recallsettingsmodel_header_title {
+  width: 100%;
+  height: 24px;
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 500;
+  font-size: 18px;
+  color: #121e3a;
+  line-height: 24px;
+  text-align: left;
+  font-style: normal;
+}
+.settings_header_subtitle {
+
+  height: 26px;
+  padding-top: 8px;
+  display: flex;
+  align-items: center;
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 400;
+  font-size: 12px;
+  color: #666e82;
+  line-height: 18px;
+  text-align: left;
+  font-style: normal;
+}
+.recallsettings_content {
+  width: 100%;
+}
+.recallsettings_content_selectcon {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.content_selectcon_common {
+  width: 196px;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid #dddfe4;
+  padding-left: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.content_selectcon_common:hover {
+  border: 1px solid #3772fe;
+}
+.content_selectcon_commonactive {
+  border: 1px solid #3772fe;
+}
+.content_selectcon_common:first-child {
+  margin-right: 8px;
+}
+.content_selectcon_qzpztxt {
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+}
+.content_selectcon_qzpztxtspan {
+  font-family: AlibabaPuHuiTiM;
+  font-size: 14px;
+  color: #364052;
+  line-height: 20px;
+  text-align: left;
+  font-style: normal;
+}
+.weightConfiguration_con {
+  width: 100%;
+}
+
+.add_variable_content_footer {
+  margin-top: 0px !important;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: flex-end;
+  gap: 12px;
+  /* padding: 0px 32px 32px 0; */
+}
+.knowledge_cancel {
+  font-weight: 500;
+  font-size: 14px;
+  color: #364052;
+}
+.knowledge_save {
+  background: #3772fe;
+  font-weight: 500;
+  font-size: 14px;
+  color: #ffffff;
+}
+.conf_rerank_content_item {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.conf_rerank_content_item_title {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+.conf_rerank_content_item_content {
+  display: flex;
+  display: -webkit-flex;
+  gap: 12px;
+  padding-top: 4px;
+}
+.conf_rerank_content_item_slider {
+  width: 60%;
+}
+
+.conf_rerank_content_item_sliderqzpz {
+  width: 94%;
+  height: 60px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  border-radius: 12px;
+  border: 1px solid #DDDFE4;
+}
+.conf_rerank_sliderqzpznum {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.conf_rerank_sliderqzpznuma {
+  height: 20px;
+  font-family: AlibabaPuHuiTiM;
+  font-size: 14px;
+  color: #5688FF;
+  line-height: 20px;
+  text-align: left;
+  font-style: normal;
+}
+.conf_rerank_sliderqzpznumb {
+  height: 20px;
+  font-family: AlibabaPuHuiTiM;
+  font-size: 14px;
+  color: #31C680;
+  line-height: 20px;
+  text-align: center;
+  font-style: normal;
+}
+.conf_rerank_select {
+  width: 94%;
+}

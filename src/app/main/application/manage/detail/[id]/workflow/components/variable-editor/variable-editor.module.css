@@ -1,0 +1,122 @@
+/* Variable Editor Styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 6px;
+  border-radius: 8px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+   overflow-y: auto;
+   height: 100%;
+   flex: 1;
+   min-height: 108px;
+   background: #F5F9FC!important;
+   
+}
+.container::-webkit-scrollbar{
+  display: none;
+}
+
+.editorInput {
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333333;
+  width: 100%;
+  min-height: 20px;
+  word-break: break-word;
+  white-space: pre-wrap;
+  max-height: 600px;
+  position: relative;
+}
+.editorInput .placeholder::before {
+  color: #8D96A7!important;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+
+/* 占位符核心样式 */
+.placeholder {
+  position: absolute;
+  left: 2px;
+  /* 1. 强制单行显示（禁止换行） */
+  white-space: nowrap !important; 
+
+  /* 2. 超出容器部分隐藏 */
+  overflow: hidden !important; 
+
+  /* 3. 超出部分显示省略号 */
+  text-overflow: ellipsis !important; 
+
+  /* 4. 限制宽度（与编辑器容器同宽） */
+  width: 100% !important; 
+  max-width: 100% !important; 
+
+  /* 5. 避免内边距/边框导致宽度溢出 */
+  box-sizing: border-box !important; 
+
+  /* 可选：调整占位符外观（保持与设计一致） */
+  color: #9ca3af; /* 占位符颜色 */
+  /* font-style: italic; 斜体效果 */
+  margin: 0; /* 清除默认段落边距 */
+  color: #8D96A7!important;
+}
+
+/* .ProseMirror{
+  position: relative;
+} */
+
+/* 针对 Tiptap 生成的占位符 p 标签 */
+.ProseMirror p.placeholder {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  width: 100% !important;
+  margin: 0 !important; /* 可选，清除默认边距 */
+}
+
+.variableNodeView{
+  display: flex;
+  gap:3px;
+  align-items: center;
+}
+.variableNodeView_img{
+  width: 12px;
+  height: 12px;
+  margin-top: 3px;
+  border-radius: 4px;
+}
+.variableNodeView_text{
+  font-size: 12px;
+  max-width: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: normal;
+  color: #666E82;
+
+}
+.variableNodeView_type{
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: normal;
+font-size: 12px;
+color: #3772FE;
+}
+.variableNodeViewWrapper{
+  background: #FFFFFF;
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin: 0 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  user-select: none;
+  vertical-align: bottom!important;
+}

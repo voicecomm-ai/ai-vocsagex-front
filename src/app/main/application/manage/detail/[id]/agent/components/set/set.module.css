@@ -1,0 +1,270 @@
+/* 记忆体 */
+.agent_long_memory_content{
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+ 
+
+}
+.agent_long_memory_content_header{
+  font-weight: normal;
+  font-size: 14px;
+  color: #364052;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0 8px ;
+ 
+}
+.agent_long_memory_content_body{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 16px;
+  border-bottom: 0.5px solid #DDDFE4!important;
+}
+.agent_long_memory_content_body_left{
+  height: 92px;
+  background: #F8FAFB;
+  border-radius: 8px;
+  border: 0.5px solid #DDDFE4;
+  flex: 1;
+  padding: 0 12px 12px 12px;
+  display: flex;
+  flex-direction: column;
+}
+.agent_long_memory_content_body_right{
+  max-height: 92px;
+  background: #F8FAFB;
+  border-radius: 8px;
+  border: 0.5px solid #DDDFE4;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 记忆部分标题 */
+.memory_section_title {
+  font-size: 14px;
+  color: #364052;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.left_tab_item_active{
+  border-bottom: 0.5px solid #DDDFE4!important;
+}
+.left_tab_item_active:hover{
+  background: #F5F9FC!important;
+ border-radius: 8px;
+  border-bottom: 0.5px solid #DDDFE4!important;
+ 
+ 
+}
+.left_tab_item_noborder{
+  border: none!important;
+}
+.left_tab_item_border{
+  border-bottom: 0.5px solid #DDDFE4!important;
+}
+/* 长期记忆头部 */
+.memory_section_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+}
+.info_img{
+  width: 21px;
+  height: 21px;
+}
+.memory_help_icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #E5E7EB;
+  color: #6B7280;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: help;
+}
+
+.memory_switch {
+  margin-left: auto;
+}
+
+/* 输入组 */
+.memory_input_group {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.memory_number_input {
+  width: 108px!important;
+  height: 36px!important;
+  background: rgba(255,255,255,0.6);
+  border-radius: 8px 8px 8px 8px;
+  border: 1px solid #DDDFE4;
+}
+
+.memory_number_input .ant-input-number-input {
+  height: 26px !important;
+  font-size: 12px !important;
+  text-align: center !important;
+}
+
+.memory_unit {
+  font-size: 12px;
+  color: #6B7280;
+  white-space: nowrap;
+}
+
+/* 微调器 */
+.memory_spinner {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.spinner_arrow {
+  width: 16px;
+  height: 12px;
+  background: #F3F4F6;
+  border: 1px solid #D1D5DB;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  color: #6B7280;
+  cursor: pointer;
+  user-select: none;
+}
+
+.spinner_arrow:hover {
+  background: #E5E7EB;
+}
+
+/* 滑块容器 */
+.memory_slider_container {
+  flex: 1;
+  margin-left: 8px;
+}
+
+/* 过期选项 */
+.memory_expiration_options {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  flex: 1;
+  padding-bottom: 12px;
+  align-items: center;
+}
+.memory_input_group_custom{
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-top: -2px;
+}
+
+.memory_option_btn {
+  padding: 4px 8px;
+  border: 1px solid #D1D5DB;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.6);
+  color: #6B7280;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  align-self: flex-start;
+  margin-right: 8px;
+}
+
+.memory_option_btn:hover {
+  background: #F3F4F6;
+}
+
+.memory_option_btn_active {
+  background: #3B82F6 !important;
+  color: white !important;
+  border-color: #3B82F6 !important;
+}
+
+
+
+/* 长期记忆选项按钮组 */
+.memory_option_buttons {
+  width: 160px;
+  height: 36px;
+background: #F5F9FC;
+  border-radius: 8px;
+  border: 0.5px solid #DBE2EA;
+  display: flex;
+   padding: 2px;
+  gap: 4px;
+}
+.memory_option_buttons_item {
+  flex: 1;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  font-size: 14px;
+  color: #666E82;
+  cursor: pointer;
+}
+.memory_option_btn_active{
+  background: #FFFFFF!important;
+border-radius: 6px!important;
+color: #3772FE!important;
+  border: 0.5px solid #DBE2EA;
+}
+
+
+/* 确保滑块在容器中正确显示 */
+.memory_slider_container {
+  position: relative;
+}
+
+/* 微调滑块样式以匹配设计 */
+.memory_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #3B82F6;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.memory_slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #3B82F6;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+.expanded {
+  transform: rotate(0deg)!important;
+}
+
+.track_step_expand{
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  transform: rotate(270deg);
+}

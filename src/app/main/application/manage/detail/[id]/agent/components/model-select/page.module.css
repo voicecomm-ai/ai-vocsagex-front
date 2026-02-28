@@ -1,0 +1,131 @@
+
+.agent_container_right_header_model {
+  width: 100%;
+  height: 36px;
+  background: rgba(55,114,254,0.06);
+  border-radius: 8px 8px 8px 8px;
+  border: 1px solid rgba(55,114,254,0.3);
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  padding: 0px 8px;
+}
+
+.model_label_render {
+  flex: 1;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  height: 30px;
+  padding: 6px 0;
+}
+
+.model_label_render_img {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+}
+.model_label_render_title {
+  max-width: 136px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: normal;
+font-size: 14px;
+color: #364052!important;
+}
+
+.model_label_render_type,
+.model_label_render_tag {
+  line-height: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 4px;
+  border: 1px solid #e8eaef;
+  font-weight: 400;
+  font-size: 11px;
+  color: #8d96a7;
+  max-width: 64px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.agent_container_right_header_model_img {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  align-items: center;
+}
+.agent_container_right_header_model_img > img {
+  width: 16px;
+  height: 16px;
+}
+.model_select_content {
+  height: 260px;
+  background: #ffffff;
+  box-shadow: 2px 2px 16px 0px rgba(18, 30, 58, 0.16);
+  border-radius: 8px;
+  border: 1px solid #dddfe4;
+  padding: 16px;
+  width: 305px;
+}
+
+.model_select_content_header {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #f2f4f6;
+}
+.model_select_content_header_title {
+  font-size: 14px;
+  color: #364052;
+  line-height: 20px;
+}
+.model_select_content_select {
+  margin-top: 8px !important;
+  width: 100%;
+  background: rgba(55,114,254,0.06);
+  border-radius: 8px 8px 8px 8px;
+  border: 1px solid rgba(55,114,254,0.3);
+  border-radius: 8px;
+}
+
+.model_select_content_parameter {
+  font-size: 14px;
+  color: #364052;
+  line-height: 20px;
+}
+.model_select_parameter_content {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.model_select_item {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  align-items: center;
+  height: 36px;
+  gap: 5px;
+  cursor: pointer;
+  padding: 6px;
+  margin-bottom: 6px;
+}
+
+.model_select_item:hover {
+  background: #F5F9FC;
+  border-radius: 8px;
+}
+.model_select_item_selected {
+  background: #F5F9FC;
+  border-radius: 8px;
+}

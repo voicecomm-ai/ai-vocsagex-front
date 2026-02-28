@@ -1,0 +1,299 @@
+
+.mcp_node{
+  background: linear-gradient( 360deg, rgba(55,114,254,0) 0%, rgba(55,114,254,0.06) 100%)no-repeat,#FFFFFF!important;
+
+  background-size: 100% 55px;
+  background-position: top;
+}
+
+.mcp_panel_tool{
+  border: 1px solid #DDDFE4!important;
+  margin-bottom: 16px!important;
+  margin-top: 12px!important;
+}
+.mcp_panel_variable_title{
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  font-weight: normal;
+font-size: 14px;
+color: #101A28;
+height: 40px;
+}
+
+.mcp_param_list{
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap:6px;
+
+  overflow: auto;
+}
+.mcp_param_list_item{
+  display: flex;
+
+  gap:3px;
+
+}
+.custom_node_header_icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  border-radius: 6px;
+}
+
+.mcp_param_list_item_title{
+  margin-bottom: 12px;
+}
+.mcp_para_list_item_name_title{
+  width: 88px;
+  font-size: 12px;
+  color: #666E82;
+  text-align: left;
+
+}
+.mcp_para_list_item_citation_title{
+  width: 65px;
+  font-size: 12px;
+  color: #666E82;
+  text-align: center;
+}
+.mcp_para_list_item_value_title{
+    flex: 1;
+    font-size: 12px;
+color: #666E82;
+text-align: left;
+padding-left: 15px;
+}
+.mcp_para_list_item_name{
+  width: 88px;
+height: 36px;
+background: #F5F9FC;
+
+font-size: 14px;
+color: #364052;
+ display: flex;
+ align-items: center;
+padding: 0 8px;
+border-radius: 8px;
+}
+.mcp_para_list_item_citation{
+  width: 70px;
+height: 36px;
+background: rgba(242,244,246,0.5)!important;
+border-radius: 8px;
+}
+.mcp_para_list_item_citation_select{
+  width:70px;
+  background: #F5F9FC!important;
+  border-radius: 8px!important;
+ 
+
+
+}
+.mcp_input{
+  height: 36px!important;
+  width: 100%!important;
+  line-height: 36px!important;
+  background: #F5F9FC!important;
+}
+.mcp_select{
+  height: 36px!important;
+  width: 182px!important;
+  background: #F5F9FC!important;
+}
+.mcp_para_list_item_value{
+  flex:1;
+  background: rgba(242,244,246,0.5);
+  border-radius: 8px;
+  overflow: hidden;
+  
+}
+.mcp_para_list_item_value_input{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  min-height: 36px;
+  gap: 8px;
+  padding: 0 3px;
+}
+.mcp_para_list_item_value_input_left{
+  min-width: 56px;
+  max-width: 100px;
+
+}
+.mcp_para_list_item_value_input_right{
+  flex:1;
+  overflow: hidden;
+}
+.json_editor_page{
+  width: 100%;
+  height: 100%;
+}
+.json_editor_page_line_numbers > .cm-gutters {
+  display: none !important;
+}
+.json_editor_page_line_numbers > .jse-error {
+  display: none !important;
+}
+.constant_json{
+  min-height: 120px;
+
+  position: relative;
+  overflow: hidden;
+}
+.constant_json_content{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: auto;
+  /* 优化滚动条样式，变细 */
+  scrollbar-width: thin;
+  scrollbar-color: #fff #fff;
+}
+
+.json_editor{
+  min-height: 120px;
+  flex:1;
+}
+.json_full{
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  display: none;
+}
+.constant_json:hover .json_full{
+  display: block;
+}
+
+
+.json_modal_content{
+  padding: 0!important;
+}
+
+.json_modal_body{
+  padding: 0;
+}
+.json_modal_container{
+
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  
+}
+.json_modal_header{
+  background-image: url('/workflow/mcp_json_bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 60px;
+  display: flex;
+    padding: 0 32px;
+  align-items: center;
+}
+.json_modal_header_left{
+  font-weight: normal;
+font-size: 24px;
+color: #132F64;
+}
+.json_modal_header_right{
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.json_modal_header_right>img{
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.json_modal_container_main{
+  margin-top:12px;
+  margin: 0 32px;
+  flex: 1;
+background: rgba(242,244,246,0.5);
+margin-bottom: 24px;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+
+}
+.json_modal_footer{
+  margin:0 32px;
+  border-top: 1px solid #E8EAEF;
+  padding: 24px 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  
+}
+
+.mcp_panel_output{
+
+  display: flex;
+  flex-direction: column;
+
+}
+.mcp_panel_output_title{
+  height: 40px;
+  font-weight: normal;
+  font-size: 14px;
+  color: #364052;
+  line-height: 40px;
+}
+
+.mcp_panel_output_main{
+  height: 54px;
+background: linear-gradient( 90deg, rgba(242,244,246,0.5) 0%, rgba(250,250,251,0) 100%);
+border-radius: 0px 0px 0px 0px;
+display: flex;
+flex-direction: column;
+gap: 8px;
+justify-content: center;
+padding:  0 6px;
+}
+.mcp_panel_output_main_item{
+  display: flex;
+  gap: 3px;
+}
+.mcp_param_list_empty{
+  margin: 16px 0;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.span_required {
+  color: #ff4d4f;
+  width: 5px;
+
+}
+
+.custom_node_header_tag{
+
+  max-width: 80px;
+  height: 20px;
+  border-radius: 4px;
+border: 1px solid #DDDFE4;
+font-weight: normal;
+font-size: 12px;
+color: #60687D;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 0 6px;
+overflow: hidden;
+}
+.custom_node_header_tag_text{
+  font-weight: normal;
+  font-size: 12px;
+  color: #60687D; 
+}
+.custom_node_header_tag_add{
+  font-weight: normal;
+  font-size: 12px;
+  color: #60687D; 
+}

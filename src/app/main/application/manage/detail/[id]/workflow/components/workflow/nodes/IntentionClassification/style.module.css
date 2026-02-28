@@ -1,0 +1,510 @@
+.panel_main {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.panel_main_header {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+
+  gap: 6px;
+  border-bottom: 1px solid #f2f4f6;
+  padding: 8px 20px;
+}
+.panel_main_header_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.panel_main_header_left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.model_select_item_selected {
+  background-color: #f2f4f6;
+  border-radius: 8px;
+}
+.panel_main_header_left_icon {
+  width: 24px;
+  height: 24px;
+}
+.panel_main_header_left_title {
+  font-size: 16px;
+  color: #101A28;
+   width: 280px;
+  border-radius: 6px 6px 6px 6px;
+}
+.panel_main_header_left_title_input {
+   width: 280px;
+  height: 32px;
+  background: #FFFFFF;
+  border-radius: 8px 8px 8px 8px;
+  border: 1px solid #3267E8;
+  padding: 4px !important;
+}
+/* 未编辑状态：字体加粗 */
+.panel_main_header_left_title_input.not-editing {
+  font-weight: bold !important;
+  font-size: 16px !important;
+  border: none;
+  background: transparent;
+  padding-left: 0px !important;
+}
+
+/* 编辑状态：描边框和字体变小 */
+.panel_main_header_left_title_input.editing {
+  font-size: 14px;
+ 
+}
+
+.panel_main_header_bottom_textarea{
+  padding: 0 !important;
+}
+
+.panel_close {
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.panel_main_con {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y:auto;
+  overflow-x: hidden;
+  padding: 0px 20px 16px 20px;
+}
+
+.panel_main_con_model {
+  padding-top: 10px;
+  width: 100%;
+}
+.panel_main_con_modeltxt {
+  height: 20px;
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 500;
+  font-size: 14px;
+  color: #101a28;
+  line-height: 20px;
+  text-align: left;
+  font-style: normal;
+}
+.panel_main_con_modelsel {
+  width: 100%;
+  height: 54px;
+  padding-top: 6px;
+  padding-bottom: 16px;
+}
+.panel_main_con_query {
+  width: 100%;
+  padding-top: 4px;
+  /* padding-bottom: 16px; */
+}
+.query_variable {
+  height: 26px;
+  padding-bottom: 6px;
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 500;
+  font-size: 14px;
+  color: #101a28;
+  text-align: left;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+}
+
+.panel_main_con_inputvarvisiontitle {
+  height: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.panel_main_con_resolution {
+  height: 20px;
+  width: 100%;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main_con_inputvarvisiontitle_left {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.main_con_inputvarvisiontitle_leftspan {
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 500;
+  font-size: 14px;
+  color: #364052;
+  text-align: left;
+  font-style: normal;
+}
+.main_con_inputvarvisiontitle_rightlevel {
+  height: 100%;
+  display: flex;
+}
+.main_con_inputvarvisiontitle_hight {
+  height: 100%;
+  width: 26px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e5e5;
+  margin-right: 6px;
+  cursor: pointer;
+}
+.main_con_inputvarvisiontitle_hightactive {
+  border: 1px solid #3267e8;
+}
+.main_con_inputvarvisiontitle_low {
+  height: 100%;
+  width: 26px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+.main_con_inputvarvisiontitle_lowactive {
+  border: 1px solid #3267e8;
+}
+
+.panel_main_con_inputvarvisioncon {
+  height: 54px;
+  width: 100%;
+  padding-top: 6px;
+  padding-bottom: 16px;
+}
+.panel_main_con_inputvar {
+  width: 100%;
+  /* height: 88px; */
+  /* background: rgba(242,244,246,0.5); */
+  border-radius: 8px;
+}
+.panel_main_con_inputvarfenlei {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  color: #364052;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.panel_main_con_inputvarfenlei_add {
+  padding: 0 !important;
+  height: 20px !important;
+}
+
+.panel_main_con_inputvarfunc {
+  width: 100%;
+  height: 32px;
+  background: rgba(242, 244, 246, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.panel_main_con_inputvarfuncleft {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+}
+.main_con_inputvarfunclefttxt {
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 500;
+  font-size: 13px;
+  color: #364052;
+  text-align: left;
+  font-style: normal;
+}
+.panel_main_con_inputvarfuncright {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.panel_main_con_iconright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main_con_document_righticon {
+  cursor: pointer;
+  margin-left: 14px;
+  height: 14px;
+  width: 14px;
+}
+.panel_main_con_inputvartxt {
+  width: 100%;
+  /* height: 66px; */
+  background: "#F8F9FA";
+  margin-bottom: 14px;
+}
+.panel_main_con_msgcon {
+  width: 380px;
+  height: 40px;
+  background: rgba(242, 244, 246, 0.5);
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.panel_main_con_msgcontxt {
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 400;
+  font-size: 14px;
+  color: #8d96a7;
+  line-height: 20px;
+  text-align: left;
+  font-style: normal;
+  margin-left: 4px;
+}
+.panel_main_con_outputvar {
+  width: 100%;
+  height: auto;
+}
+.panel_main_con_outputvartitle {
+  width: auto;
+  height: 30px;
+  padding-top: 10px;
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 500;
+  font-size: 14px;
+  color: #364052;
+  line-height: 20px;
+  text-align: left;
+  font-style: normal;
+}
+
+.panel_main_output_con_ul {
+  width: 100%;
+  height: auto;
+}
+.panel_main_output_con_ul_li {
+  width: 100%;
+  height: 54px;
+  background: linear-gradient(270deg, rgba(250, 250, 251, 0) 0%, rgba(242, 244, 246, 0.5) 100%);
+  padding-top: 6px;
+  padding-bottom: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main_output_con_ul_li_top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  line-height: 16px;
+}
+.main_output_con_ul_li_topa {
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 500;
+  font-size: 14px;
+  color: #364052;
+  text-align: left;
+  font-style: normal;
+  margin-right: 8px;
+}
+.main_output_con_ul_li_topb {
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 400;
+  font-size: 12px;
+  color: #666e82;
+  text-align: left;
+  font-style: normal;
+}
+.main_output_con_ul_li_bottom {
+  margin-top: 2px;
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 400;
+  font-size: 12px;
+  color: #666e82;
+  text-align: left;
+  font-style: normal;
+  line-height: 16px;
+}
+
+/* 意图分类新修改样式 */
+.intent-classify-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.intent-classify-index {
+  color: #3772fe;
+}
+
+/* run */
+.start_run_panel_content_main {
+  padding: 0 20px;
+}
+.variable-tips {
+  margin-bottom: 20px;
+}
+.variable-textarea {
+  background: rgba(242, 244, 246, 0.5) !important;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.start_run_btn {
+  width: 80%;
+  background-color: #3772fe !important;
+  display: block;
+  margin: 0 auto;
+}
+
+.tab-items-content {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* 展开样式 */
+.start_panel_variable_item_left_icon_img {
+  width: 16px;
+  height: 16px;
+}
+.doc_parse_dropdowm_file_types_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  cursor: pointer;
+  color: #666e82;
+  position: relative;
+  overflow: visible;
+}
+
+.doc_parse_dropdowm_file_types_item_hover {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  cursor: pointer;
+  color: #666e82;
+  position: relative;
+  overflow: visible;
+  background: #f2f4f6;
+  border-radius: 4px 4px 4px 4px;
+}
+.dropdowm_file_single_type_wrap_block {
+  position: absolute;
+  min-width: 120px;
+  height: 200px;
+  background: #ffffff;
+  box-shadow: 2px 2px 12px 0px rgba(102, 110, 130, 0.2);
+  border-radius: 8px 8px 8px 8px;
+  padding: 4px 8px;
+  /* background: #8D96A7; */
+  right: 120px;
+  z-index: 999;
+  overflow-y: auto;
+  bottom: 0;
+  display: block;
+}
+.dropdowm_file_single_type_wrap {
+  position: absolute;
+  /* width: 120px; */
+  min-width: 120px;
+  height: 200px;
+  background: #ffffff;
+  box-shadow: 2px 2px 12px 0px rgba(102, 110, 130, 0.2);
+  border-radius: 8px 8px 8px 8px;
+  padding: 4px 8px;
+  /* background: #8D96A7; */
+  right: 100%;
+  overflow-y: auto;
+  bottom: 0;
+  display: none;
+  z-index: 1000;
+}
+.dropdowm_file_single_type_wrap_item {
+  padding: 8px;
+}
+
+.panel-if-condition-left-item {
+  background: #F5F9FC;
+  border-radius: 4px;
+  margin-bottom: 2px;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: space-between;
+  color: #666e82;
+  font-size: 12px;
+}
+.fullscreen_container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: calc(100% - 30px);
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #f2f4f6;
+  /* box-shadow: -2px 2px 16px 3px rgba(18, 30, 58,0.2); */
+}
+.contentInput_header_right_copy {
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  margin-left: 8px;
+}
+.contentInput_header_right_wordCount {
+  font-size: 12px;
+  color: #666e82;
+}
+.contentInput_dividing_line {
+  width: 1px;
+  height: 14px;
+  background-color: #e4e6ea;
+  margin-left: 8px;
+}
+.contentInput_header_right {
+  display: flex;
+  align-items: center;
+}
+
+.intention_node {
+  background: linear-gradient(360deg, rgba(143, 63, 255, 0) 0%, rgba(250, 84, 28, 0.06) 100%)no-repeat,
+    #ffffff;
+  box-shadow: 2px 3px 12px 0px rgba(102, 110, 130, 0.2);
+  background-size: 100% 55px;
+  background-position: top;
+}
+.divider {
+  border-top: 1px solid rgba(242, 244, 246, 1);
+  margin: 6px -20px 0;  /* 同样用负 margin 抵消父 padding */
+}
+
+.intent-classify-textarea{
+  background: #F5F9FC!important;
+  border-radius: 8px!important;
+  height: 36px!important;
+  line-height: 36px!important;
+  padding: 0 8px!important;
+  border: none!important;
+  outline: none!important;
+  flex: 1;
+
+}

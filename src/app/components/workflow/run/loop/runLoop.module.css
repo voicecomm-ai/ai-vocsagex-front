@@ -1,0 +1,89 @@
+.run_loop{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+ 
+  padding: 0 16px 8px 16px;
+
+}
+
+.run_loop_header{
+  font-weight: normal;
+font-size: 14px;
+color: #364052;
+display: flex;
+align-items: center;
+gap: 3px;
+padding-left: 12px;
+cursor: pointer;
+}
+.run_loop_item_name{
+}
+
+.expanded {
+  transform: rotate(0deg)!important;
+}
+
+.track_step_expand{
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  transform: rotate(270deg);
+}
+
+.run_loop_item{
+ display: flex;
+ flex-direction: column;
+ padding-left:28px;
+}
+.run_loop_item_header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.run_loop_item_icon{
+  width: 16px;
+  height: 16px;
+}
+.run_loop_item_header_left{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:3px;
+}
+.run_loop_item_name{
+  font-weight: normal;
+font-size: 14px;
+color: #364052;
+}
+.run_loop_item_header_right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:3px;
+} 
+.track_step_duration{
+  font-weight: normal;
+font-size: 12px;
+color: #666E82;
+}
+.run_loop_item_header_right_token{
+  font-weight: normal;
+  font-size: 12px;
+  color: #666E82;
+}
+.run_loop_item_content{
+  padding: 8px  0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.track_step_running_text {
+  font-weight: 400;
+  font-size: 10px;
+  color: #1890FF;
+  animation: pulse 1.5s ease-in-out infinite;
+}

@@ -1,0 +1,104 @@
+.extract-table__wrapper {
+  width: 100%;
+  overflow: auto;
+}
+
+.extract-table__wrapper > div {
+  width: 92%;
+  overflow: auto;
+}
+.extract-table__wrapper > div::-webkit-scrollbar {
+  width: 5px !important;
+  height: 5px !important;
+}
+.extract-table__wrapper > div::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+/* 表格添加边框样式 */
+.extract-table__wrapper td,
+.extract-table__wrapper th {
+  min-width: 130px;
+  border: 1px solid #c1c1c1;
+}
+
+.extract-table__wrapper table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 6px;
+}
+
+.extract-table__wrapper table td {
+  padding: 4px 8px;
+}
+
+/* 表头圆角 */
+.extract-table__wrapper table thead th:first-of-type {
+  border-top-left-radius: 4px;
+}
+
+.extract-table__wrapper table thead th:last-of-type {
+  border-top-right-radius: 4px;
+}
+
+/* 无 thead 时的圆角 */
+.extract-table__wrapper
+  table:not(:has(thead))
+  tr:first-of-type
+  td:first-of-type {
+  border-top-left-radius: 4px;
+}
+
+.extract-table__wrapper
+  table:not(:has(thead))
+  tr:first-of-type
+  td:last-of-type {
+  border-top-right-radius: 4px;
+}
+
+/* 无 tbody 时的边框 */
+.extract-table__wrapper table:not(:has(tbody)) th {
+  border-block-width: 1px;
+  border-inline-width: 1px;
+}
+
+/* 最后一行圆角 */
+.extract-table__wrapper table tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 4px;
+}
+
+.extract-table__wrapper table tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 4px;
+}
+
+.extract-table__wrapper table th,
+.extract-table__wrapper table td {
+  border: 1px solid #c1c1c1;
+  border-block-width: 1px 0;
+  border-inline-width: 1px 0;
+}
+
+.extract-table__wrapper table th:last-of-type,
+.extract-table__wrapper table td:last-of-type {
+  border-inline-end-width: 1px;
+}
+
+/* tbody 和 tfoot 最后一行边框 */
+.extract-table__wrapper tbody tr:last-of-type th,
+.extract-table__wrapper tbody tr:last-of-type td,
+.extract-table__wrapper tfoot tr:last-of-type th,
+.extract-table__wrapper tfoot tr:last-of-type td {
+  border-block-end-width: 1px;
+}
+
+/* 有 tfoot 时 tbody 最后一行的下边框隐藏 */
+.extract-table__wrapper table:has(tfoot) tbody tr:last-of-type th,
+.extract-table__wrapper table:has(tfoot) tbody tr:last-of-type td {
+  border-block-end-width: 0;
+}
+
+.extract-table__wrapper img {
+  max-width: 100%;
+}

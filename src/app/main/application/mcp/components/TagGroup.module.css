@@ -1,0 +1,69 @@
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.tagWrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  flex: 1;
+}
+
+.tagWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.tag {
+  border-radius: 8px !important;
+  padding: 6px 18px !important;
+
+  color: #666e82 !important;
+  font-size: 14px !important;
+  margin-right: 8px;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+  max-width: 180px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tag:hover {
+  color: #3772FE !important;
+  background: rgba(55,114,254,0.1)!important;
+}
+
+.active {
+  background: rgba(55,114,254,0.1)!important;
+  color: #3772FE!important;
+  font-weight: normal;
+  font-size: 14px !important;
+}
+
+.scrollBtn {
+  margin-left: 6px;
+  background: #F5F9FC !important;
+  border: 1px solid #dddfe4 !important;
+  border-radius: 8px !important;
+  border: none;
+  flex-shrink: 0;
+}
+
+.leftBtn {
+  margin-right: 6px;
+  border: 1px solid #dddfe4 !important;
+}
+
+/* 新增按钮+右箭头组合容器（在滚动时显示） */
+.controlGroup {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: 6px;
+}

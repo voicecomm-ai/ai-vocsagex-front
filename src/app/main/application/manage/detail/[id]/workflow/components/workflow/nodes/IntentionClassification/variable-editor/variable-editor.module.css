@@ -1,0 +1,81 @@
+/* Variable Editor Styles */
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 6px;
+  border-radius: 8px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+   overflow-y: auto;
+   height: 210px;
+   flex: 1;
+   
+}
+
+
+.editorInput {
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333333;
+  width: 100%;
+  min-height: 200px;
+  word-break: break-word;
+  white-space: pre-wrap;
+  /* max-height: 600px; */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.editorInput .placeholder::before {
+   color: #8D96A7!important;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.placeholder{
+  color: #8D96A7!important;
+}
+.variableNodeView{
+  display: flex;
+  gap:3px;
+  align-items: center;
+}
+.variableNodeView_img{
+  width: 12px;
+  height: 12px;
+  margin-top: 3px;
+}
+.variableNodeView_text{
+  font-size: 12px;
+  max-width: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: normal;
+  color: #666E82;
+
+}
+.variableNodeView_type{
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: normal;
+font-size: 12px;
+color: #3772FE;
+}
+.variableNodeViewWrapper{
+  background: #FFFFFF;
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin: 0 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  user-select: none;
+  vertical-align: bottom!important;
+}

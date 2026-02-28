@@ -1,0 +1,615 @@
+.knowledgePanelHeader {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+
+  gap: 6px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f2f4f6;
+}
+.knowledgePanelHeaderTop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.knowledgePanelHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.knowledgePanelHeaderIcon {
+  width: 24px;
+  height: 24px;
+}
+.knowledgePanelHeaderTitle {
+  font-size: 16px;
+  color: #101a28;
+}
+.knowledgePanelHeaderTitleInput {
+  width: 280px;
+  height: 32px;
+  background: #ffffff;
+  border-radius: 8px 8px 8px 8px;
+  border: 1px solid #3267e8;
+}
+.knowledgePanelClose {
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.knowledgePanel{
+  height: 100%;
+}
+.knowledgePanelContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* 隐藏滚动条 */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  padding:  0 20px;
+}
+.knowledgePanelContent::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera */
+}
+.knowledgePanelQuerySection {
+  width: 100%;
+  height: 84px;
+  padding-top: 4px;
+  padding-bottom: 16px;
+}
+.queryVariableLabel {
+  height: 32px;
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 500;
+  font-size: 14px;
+  color: #101a28;
+  line-height: 20px;
+  text-align: left;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+}
+.queryVariableInput {
+  width: 100%;
+  height: 32px;
+
+  background: #f2f4f680;
+  border-radius: 8px;
+}
+
+.knowledgePanelKnowledgeBaseSection {
+  width: 100%;
+}
+.knowledgePanelDocumentSection {
+  width: 100%;
+}
+.knowledgeBaseHeader {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.knowledgeBaseHeaderLeft {
+  height: 100%;
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 500;
+  font-size: 14px;
+  color: #101a28;
+  line-height: 20px;
+  text-align: left;
+  font-style: normal;
+}
+.knowledgeBaseHeaderRight {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.knowledgeBaseActionRecall {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.actionText {
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 500;
+  font-size: 12px;
+  color: #364052;
+  line-height: 17px;
+  text-align: center;
+  font-style: normal;
+  margin-left: 4px;
+}
+.knowledgeBaseActionAdd {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+  cursor: pointer;
+}
+.knowledgeBaseList {
+  width: 100%;
+  padding-top: 6px;
+  padding-left: 0px;
+  margin-bottom: 16px;
+}
+.knowledgeBaseItemEmpty {
+  width: 100%;
+  height: 40px;
+  background: #F5F9FC;
+  border-radius: 8px;
+}
+.knowledgeBaseItemEmptyInner {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.knowledgeBaseItemEmptyText {
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 400;
+  font-size: 14px;
+  color: #8D96A7;
+  line-height: 20px;
+  text-align: left;
+  font-style: normal;
+  margin-left: 4px;
+}
+.knowledgeBaseItem {
+  width: 100%;
+  height: 32px;
+  margin-bottom: 4px;
+  background: #F5F9FC;
+  border-radius: 8px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.knowledgeBaseItem:last-child {
+  margin-bottom: 0px;
+}
+.knowledgeBaseItemLeft {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+}
+.knowledgeBaseItemName {
+  font-weight: 400;
+  font-size: 13px;
+  color: #364052;
+  line-height: 18px;
+  text-align: left;
+  font-style: normal;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+.knowledgeBaseItemRight {
+  height: 100%;
+  padding-right: 8px;
+  display: flex;
+  align-items: center;
+}
+.knowledgeBaseItemActions {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.knowledgeBaseItemStrategy {
+  width: 60px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid #dddfe4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.knowledgeBaseItemStrategyText {
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 400;
+  font-size: 12px;
+  color: #666e82;
+  line-height: 16px;
+  text-align: right;
+  font-style: normal;
+}
+.knowledgeBaseItemActionButtons {
+  display: none;
+}
+.knowledgeBaseItem:hover {
+  background: #ffffff;
+  box-shadow: 0px 2px 8px 0px rgba(54, 64, 82, 0.1);
+}
+.knowledgeBaseItem:hover .knowledgeBaseItemStrategy {
+  display: none;
+}
+
+.knowledgeBaseItem:hover .knowledgeBaseItemActionButtons {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.knowledgeBaseItem:hover .knowledgeBaseItemActionButtons .knowledgeBaseItemActionDelete {
+  width: 24px;
+  height: 24px;
+  background: #ee5a551a;
+  border-radius: 6px;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.knowledgeBaseItemActionEdit {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.knowledgeBaseItemActionDelete {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.documentFilterTitle {
+  width: 100%;
+  height: 20px;
+  /* padding-top: 16px; */
+  display: flex;
+  align-items: center;
+}
+.documentFilterTitleText {
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 500;
+  font-size: 14px;
+  color: #364052;
+  line-height: 20px;
+  text-align: left;
+  font-style: normal;
+}
+.documentFilterTitleIcon {
+  cursor: pointer;
+}
+.documentFilterContent {
+  width: 100%;
+}
+.documentFilterSelect {
+  width: 100%;
+  padding-top: 6px;
+  padding-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+.documentFilterModelTip{
+  font-weight: 400;
+  font-size: 12px;
+  color: #8D96A7;
+  padding-bottom: 12px;
+}
+.documentFilterSelectLeft {
+  width: 120px;
+  height: 32px;
+  background: #F5F9FC;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.documentFilterSelectIcon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.documentFilterSelectText {
+  height: 100%;
+  padding-left: 8px;
+  display: flex;
+  align-items: center;
+}
+.documentFilterSelectTextSpan {
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 400;
+  font-size: 14px;
+  color: #364052;
+  text-align: left;
+  font-style: normal;
+}
+.documentFilterSelectPopup {
+  position: absolute;
+  left: 3px;
+  top: 116%;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  background: #ffffff;
+  box-shadow: 1px 1px 12px 0px rgba(100, 113, 152, 0.5);
+  border-radius: 12px;
+  transition: all 0.2s 0.1s;
+}
+.documentFilterSelectLeft:hover > .documentFilterSelectPopup {
+  height: 186px;
+  width: 240px;
+  padding: 8px;
+  opacity: 1;
+}
+.documentFilterSelectLeft:hover > .documentFilterSelectIcon {
+  transform: rotate(180deg);
+}
+.documentFilterPopupList {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.documentFilterPopupItem {
+  width: 100%;
+  height: 54px;
+  cursor: pointer;
+  padding-top: 8px;
+  padding-left: 8px;
+
+  border-radius: 8px;
+  border: 1px solid #f2f4f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.documentFilterPopupItemActive {
+  background: #F5F9FC;
+  border-radius: 8px;
+  border: 1px solid #dddfe4;
+  cursor: "not-allowed";
+}
+.documentFilterPopupItemName {
+  height: 20px;
+  font-family: AlibabaPuHuiTiM;
+  font-size: 14px;
+  color: #364052;
+  line-height: 20px;
+  text-align: left;
+  font-style: normal;
+}
+.documentFilterPopupItemDesc {
+  height: 24px;
+  padding-bottom: 8px;
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 400;
+  font-size: 12px;
+  color: #666e82;
+  line-height: 16px;
+  text-align: left;
+  font-style: normal;
+}
+.documentFilterPopupItem:hover {
+  background: rgba(55, 114, 254, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(55, 114, 254, 0.6);
+}
+
+.documentFilterSelectRight {
+  height: 32px;
+  width: calc(100% - 120px);
+  margin-left: 4px;
+}
+.documentFilterSelectModel {
+  height: 100%;
+  width: 100%;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+}
+.documentFilterSelectCondition {
+  height: 100%;
+  width: 100px;
+  background: #F5F9FC;
+  border-radius: 8px;
+  border: 1px solid #dddfe4;
+  padding-left: 12px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+}
+.documentFilterConditionLabel {
+  font-family: AlibabaPuHuiTiM;
+  font-size: 14px;
+  color: #3772fe;
+  text-align: left;
+  font-style: normal;
+  margin-left: 4px;
+  margin-right: 8px;
+}
+.documentFilterConditionCount {
+  font-family: AlibabaPuHuiTiM;
+  font-size: 14px;
+  color: #666e82;
+  text-align: left;
+  font-style: normal;
+}
+.knowledgePanelOutput {
+  width: 100%;
+  border-top: 1px solid #f2f4f6;
+  padding-top: 6px;
+}
+.outputVariableTitle {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 500;
+  font-size: 14px;
+  color: #364052;
+  line-height: 20px;
+  text-align: left;
+  font-style: normal;
+}
+
+.outputVariableResult {
+  width: 100%;
+  height: 54px;
+  background: linear-gradient( 270deg, rgba(250,250,251,0) 0%, rgba(242,244,246,0.5) 100%);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.outputVariableResultText {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+.outputVariableResultName {
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 500;
+  font-size: 14px;
+  color: #364052;
+  text-align: left;
+  font-style: normal;
+  margin-right: 8px;
+}
+
+.outputVariableResultType {
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 400;
+  font-size: 12px;
+  color: #666E82;
+  text-align: left;
+  font-style: normal;
+}
+.outputVariableResultDesc {
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 400;
+  font-size: 12px;
+  color: #666E82;
+  line-height: 16px;
+  text-align: left;
+  font-style: normal;
+}
+.knowledgePanelOutputList {
+  width: 100%;
+  height: auto;
+  padding-left: 6px;
+}
+.knowledgePanelOutputListUl {
+  width: 100%;
+  height: auto;
+  border-left: 1px solid #DDDFE4;
+  padding-left: 12px;
+}
+.knowledgePanelOutputListItem {
+  width: 100%;
+  height: 48px;
+  background: rgba(220,220,220,0);
+  padding-top: 6px;
+  padding-bottom: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.outputListItemTop {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.outputListItemName {
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 500;
+  font-size: 14px;
+  color: #364052;
+  text-align: left;
+  font-style: normal;
+  margin-right: 8px;
+}
+.outputListItemType {
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 400;
+  font-size: 12px;
+  color: #666E82;
+  text-align: left;
+  font-style: normal;
+}
+.outputListItemDesc {
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 400;
+  font-size: 12px;
+  color: #666E82;
+  text-align: left;
+  font-style: normal;
+}
+.knowledgePanelHeaderRight{
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+
+}
+.knowledgeNode{
+  background: linear-gradient( 360deg, rgba(55,114,254,0) 0%, rgba(55,114,254,0.06) 100%)no-repeat,#FFFFFF !important;
+
+  background-size: 100% 55px !important;
+  background-position: top !important;
+}
+.knowledgePanelVariableContent{
+  margin-top: 10px;
+  display: flex;
+   flex-direction: column;
+  font-size: 12px;
+color: #364052;
+min-height: 24px;
+border-radius: 4px 4px 4px 4px;
+  gap: 4px;
+  position: relative;
+}
+.knowledgeNodeVariableItem{
+  height: 24px;
+  background: #F2F4F6;
+  border-radius: 4px 4px 4px 4px;
+
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  font-size: 12px;
+  color: #666E82;
+  padding: 0 8px;
+}
+.knowledge_panel_variable_content{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.knowledge_node_variable_item{
+  height: 24px;
+  background: #F5F9FC;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  padding: 0 8px;
+}
+.data_set_panel_variable_name{
+  font-weight: normal;
+font-size: 12px;
+color: #364052;
+}

@@ -1,0 +1,453 @@
+.variableCascader {
+  width: 100%;
+
+}
+
+.searchContainer {
+  padding: 12px;
+ 
+}
+
+.searchInput {
+  width: 100%;
+}
+
+.searchInput :global(.ant-input) {
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  font-size: 14px;
+}
+
+.searchInput :global(.ant-input:focus),
+.searchInput :global(.ant-input-focused) {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.cascaderContainer {
+   height: 100%;
+  overflow-y: auto;
+  width: 100%;
+background: #FFFFFF;
+box-shadow: 2px 2px 12px 0px rgba(102,110,130,0.2);
+border-radius: 8px 8px 8px 8px
+}
+
+.cascaderPanel {
+  width: 100%;
+  border: none;
+  background: #fff;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.cascaderPanel :global(.ant-cascader-menus) {
+  display: flex;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+ 
+}
+
+.cascaderPanel :global(.ant-cascader-menu) {
+  border: none;
+  background: #fff;
+}
+
+.cascaderPanel :global(.ant-cascader-menu-item) {
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.3s;
+}
+
+.cascaderPanel :global(.ant-cascader-menu-item:hover) {
+  background-color: #f5f5f5;
+}
+
+.cascaderPanel :global(.ant-cascader-menu-item-selected) {
+  background-color: #e6f7ff;
+  color: #1890ff;
+  font-weight: 500;
+}
+
+.cascaderPanel :global(.ant-cascader-menu-item-active) {
+  background-color: #f0f0f0;
+}
+
+/* 节点选项样式 */
+.nodeOption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.nodeIcon {
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+
+.nodeName {
+  font-weight: 500;
+  color: #262626;
+}
+
+/* 变量选项样式 */
+.variableOption {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+}
+
+.variableName {
+  font-weight: 500;
+  color: #262626;
+}
+
+.variableType {
+  color: #8c8c8c;
+  font-size: 12px;
+  background: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* 属性选项样式 */
+.propertyOption {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  padding-left: 16px;
+}
+
+.propertyName {
+  color: #595959;
+  font-size: 13px;
+}
+
+.propertyType {
+  color: #8c8c8c;
+  font-size: 11px;
+  background: #f0f0f0;
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+
+/* 空状态样式 */
+.emptyState {
+  padding: 24px 12px;
+  text-align: center;
+  color: #8c8c8c;
+  font-size: 14px;
+  background: #fafafa;
+}
+
+/* 级联菜单样式 */
+.cascaderPanel :global(.ant-cascader-menu) {
+  min-width: 200px;
+  border-right: 1px solid #f0f0f0;
+  background: #fff !important;
+}
+
+.cascaderPanel :global(.ant-cascader-menu:last-child) {
+  border-right: none;
+}
+
+/* 展开箭头样式 */
+.cascaderPanel :global(.ant-cascader-menu-item-expand-icon) {
+  color: #bfbfbf;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.cascaderPanel :global(.ant-cascader-menu-item-expand-icon:hover) {
+  color: #8c8c8c;
+}
+
+/* 选中状态样式 */
+.cascaderPanel :global(.ant-cascader-menu-item-selected .ant-cascader-menu-item-expand-icon) {
+  color: #1890ff;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .variableCascader {
+    border-radius: 4px;
+  }
+  
+  .searchContainer {
+    padding: 8px;
+  }
+  
+  .cascaderPanel {
+    max-height: 250px;
+  }
+  
+  .cascaderPanel :global(.ant-cascader-menu) {
+    min-width: 160px;
+  }
+}
+
+/* 滚动条样式 */
+.cascaderContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cascaderContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.cascaderContainer::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.cascaderContainer::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+
+/* 确保级联选择器面板背景不透明 */
+.cascaderPanel :global(.ant-cascader-panel) {
+  background: #fff !important;
+}
+
+.cascaderPanel :global(.ant-cascader-dropdown) {
+  background: #fff !important;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* 禁用状态 */
+.variableCascader.disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.variableCascader.disabled .searchContainer {
+  background: #f5f5f5;
+}
+
+.variableCascader.disabled .searchInput :global(.ant-input) {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+/* 变量和属性图标样式 */
+.variableIcon,
+.propertyIcon {
+  font-size: 14px;
+  width: 18px;
+  text-align: center;
+}
+
+.renderNodeItems{
+  display:flex;
+  display: -webkit-flex;
+  flex-direction: column;
+
+}
+.renderNodeItem{
+  height: 32px;
+  display: flex;
+  align-items: center;
+  margin: 4px 12px;
+  padding: 0 6px;
+  gap: 8px;
+}
+.renderNodeItem:hover{
+  background: #F2F4F6;
+  border-radius: 4px;
+}
+.renderNodeItemActive{
+  background: #F2F4F6;
+  border-radius: 4px; 
+}
+.renderNodeItemIcon{
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+.renderNodeItemRight{
+  margin-left: auto;
+  color: #666E82;
+}
+.renderNodeChilds{
+  width: 252px;
+max-height: 236px;
+background: #FFFFFF;
+border-radius: 8px;
+overflow: auto;
+padding: 8px;
+}
+.renderNodeChild{
+  height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+color: #364052;
+padding: 0 8px;
+cursor: pointer;
+}
+.renderNodeChild:hover{
+  background: #F2F4F6;
+  border-radius: 4px;
+}
+
+
+.renderNodeChildRight{
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+}
+.renderNodeChildRightIcon{
+  color: #666E82;
+  font-size: 12px;
+  margin-top: 2px;
+}
+.renderNodeChildIcon{
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+.renderNodeChildLabel{
+  font-size: 12px;
+color: #364052;
+line-height: 16px;
+}
+.renderSelectData{
+  width: 100%;
+  height: 32px;
+border-radius: 8px 8px 8px 8px;
+border: 1px solid #DDDFE4;
+display: flex;
+align-items: center;
+padding: 0 8px;
+font-weight: normal;
+font-size: 14px;
+color: #8D96A7;
+cursor: pointer;
+gap: 8px;
+}
+.renderSelectDataImg{
+  width: 16px;
+  height: 16px;
+}
+.renderSelectDataTitle{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.renderSelectDataTitleText{   
+  font-size: 12px;
+  color: #364052;
+  line-height: 16px;
+}
+.renderSelectDataName{
+  font-size: 12px;
+  color: #364052;
+  line-height: 16px;
+}
+
+.renderSelectDataType {
+
+  padding: 0 4px;
+  height: 20px;
+  line-height: 20px;
+  background: #F2F4F6;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 12px;
+  color: #666E82;
+}
+.renderSelectDataClose{
+  margin-left: auto;
+  color: #666E82;
+  cursor: pointer;
+}
+
+
+/* 变量弹框样式 */
+.variablePopup {
+ 
+  z-index: 1000000;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 280px;
+  max-width: 300px;
+  max-height: 600px;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  /* 确保弹框可以正常接收事件 */
+  pointer-events: auto;
+  /* 添加硬件加速 */
+  transform: translateZ(0);
+  will-change: transform, opacity;
+  /* 防止内容重排 */
+  contain: layout style paint;
+}
+
+/* 变量弹框显示在上方时的样式 */
+.variablePopupAbove {
+  /* 当显示在上方时，可以调整阴影方向 */
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+  /* 可以添加其他视觉提示，比如箭头指向下方 */
+}
+
+/* 变量弹框隐藏状态 */
+.variablePopupHidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-3px) translateZ(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
+  }
+}
+
+.renderNodeItemDisabled{
+
+  border-radius: 4px;
+  color: #8D96A7;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  margin: 4px 12px;
+  padding: 0 6px;
+  gap: 8px;
+  cursor: not-allowed!important;
+}

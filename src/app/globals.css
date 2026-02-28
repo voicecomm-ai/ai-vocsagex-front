@@ -1,0 +1,542 @@
+body {
+  min-width: 1376px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.ant-table-thead>tr>th {
+  font-size: 12px !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+}
+
+.ant-popover-inner {
+  padding: 0 !important;
+}
+
+.popover_content .ant-popover-inner {
+  background-color: transparent !important;
+  background-clip: padding-box !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* 公共标题样式 */
+.page-title {
+  font-weight: bold;
+  font-size: 24px;
+  color: #121e3a;
+}
+
+/* 公共弹框样式 */
+.model_container {
+  background-image: url("/layout/pwd_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* 防止背景图重复 */
+  background-position: center;
+  /* 背景图居中显示 */
+  border-radius: 24px !important;
+}
+
+.my-modal-content {
+  padding: 0px !important;
+  border-radius: 24px !important;
+}
+
+.model_header {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+}
+
+.model_header_title {
+  padding: 32px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #101a28;
+  line-height: 36px;
+}
+
+.model_header_close_img {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  padding: 32px;
+}
+
+.model_footer {
+  margin-top: 32px;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: flex-end;
+  gap: 32px;
+  padding: 12px 52px 32px 0;
+}
+
+.model_footer_btn {
+  width: 112px;
+  height: 40px !important;
+
+  border-radius: 12px !important;
+  border: 1px solid #dddfe4;
+}
+
+.my-modal-content {
+  padding: 0px !important;
+  border-radius: 24px !important;
+}
+
+/* 图片上传样式 */
+.full-upload{
+  
+  background-color:  rgba(219,226,234,0.3);
+  border-radius: 10px;
+}
+.full-upload .ant-upload {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  padding: 5px 0;
+}
+
+.full-upload.ant-upload.ant-upload-select-picture-card {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0 !important;
+}
+
+/* 应用卡片多选样式 */
+.ant-card .ant-card-body {
+  padding: 16px !important;
+}
+
+.card-checkbox-group .ant-checkbox-group-item {
+  border-radius: 4px;
+  padding: 4px 6px !important;
+  color: #666e82;
+}
+
+.card-checkbox-group .ant-checkbox-group-item:hover {
+  color: #101a28;
+}
+
+.card-checkbox-group .ant-checkbox-group-item:hover {
+  background: #f2f4f6;
+}
+
+.operation_column {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-checkbox-group>.ant-checkbox-group-item>.ant-checkbox-label {
+  word-break: break-all !important;
+}
+
+.ant-drawer-content-wrapper {
+  box-shadow: none !important;
+}
+
+/* 通用弹框样式 */
+.my-modal-content {
+  padding: 0px !important;
+  border-radius: 24px !important;
+}
+
+/* tab active样式 */
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #078AF8 !important;
+  font-weight: 600;
+}
+
+.ant-tabs-tab-btn {
+  color: #666E82 !important;
+  font-weight: 500;
+}
+
+.ant-tabs-ink-bar {
+  background-color: #078AF8 !important;
+}
+
+.ant-tabs .ant-tabs-tab:hover {
+  color: #078AF8 !important;
+}
+
+/* 模型表单 */
+.model-form .ant-form-item {
+  margin-bottom: 16px;
+}
+
+.download-form .ant-form-item {
+  margin-bottom: 8px;
+}
+
+/* 开关样式 */
+.support-switch .ant-switch .ant-switch-handle::before {
+  border-radius: 4px !important;
+}
+
+.upload_create>.ant-upload-wrapper .ant-upload-drag {
+  background: rgba(250, 252, 253, 1) !important;
+  border: none !important;
+  border-radius: none !important;
+}
+
+.upload_create>.ant-upload-wrapper .ant-upload-list .ant-upload-list-item-container {
+  display: none !important;
+}
+
+.cm-gutters-before{
+  display: none!important;
+}
+
+.no-main-menu{
+  border-top: none !important;
+}
+
+/* 样式写在全局 CSS 文件中，比如 index.css 或 layout.module.css */
+.tiptap {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #364052;
+  padding: 5px 5px 0 5px;
+  flex: 1;
+}
+
+/* 防止 h1、h2 等突然放大 */
+.tiptap h1,
+.tiptap h2,
+.tiptap h3,
+.tiptap h4,
+.tiptap h5,
+.tiptap h6 {
+  font-size: 14px;
+
+  margin: 0;
+}
+
+/* 防止 h1、h2 等突然放大 */
+.tiptap h1,
+.tiptap h2,
+.tiptap h3,
+.tiptap h4,
+.tiptap h5,
+.tiptap h6 {
+  font-size: 14px;
+
+  margin: 0;
+}
+
+/* 控制段落 */
+.tiptap p {
+  margin: 0;
+}
+
+.editor-container {}
+
+/* tab公共样式 */
+.ant-tabs .ant-tabs-tab {
+  color: #666e82 !important;
+}
+
+.ant-select-dropdown .ant-select-item {
+  color: #666e82 !important;
+}
+
+/* 兼容 hover + selected 场景 */
+.ant-select-dropdown .ant-select-item-option.ant-select-item-option-selected {
+  color: #101a28 !important;
+}
+
+.custom-tabs .ant-tabs-nav::before {
+  border-bottom: 1px solid #dcdcdc !important;
+  /* 自定义颜色 */
+}
+
+.create_conf_container_right_loading {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+}
+
+.create_conf_container_right_loading>.ant-spin-container {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.ant-input-number-suffix {
+  font-weight: 400;
+  font-size: 11px;
+  color: #8d96a7;
+}
+
+.chat_popover>.ant-popover-arrow {
+  margin-right: 35px !important;
+}
+
+.popover-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  /* 可调透明度 */
+  z-index: 999;
+  /* 比页面其他内容高，但比 Popover 低 */
+}
+
+.ant-message {
+  z-index: 10001 !important;
+}
+
+.ant-form-item-explain-error {
+  font-size: 12px !important;
+}
+
+.chat-image {
+  min-width: 50px !important;
+  min-height: 50px !important;
+  max-width: 360px !important;
+}
+
+.custom-segmented.ant-segmented .ant-segmented-item {
+  border-radius: 6px !important;
+}
+
+.custom-segmented.ant-segmented .ant-segmented-item-selected {
+  font-weight: 500;
+}
+
+.model_type_select>.ant-select-selector {
+  background: rgba(255, 255, 255, 0.6) !important;
+  border-radius: 8px !important;
+
+  border: 1px solid #dddfe4 !important;
+}
+
+/* 修改全局的 placeholder颜色 */
+.ant-input::placeholder {
+  color: #8d96a7 !important;
+}
+
+.ant-input-number-input::placeholder {
+  color: #8d96a7 !important;
+}
+
+.ant-select-selection-placeholder {
+  color: #8d96a7 !important;
+}
+
+/* .ant-input-affix-wrapper-focused {
+  background-color: #fff !important;
+} */
+/* input及select focus状态下的边框颜色修改 */
+:where(.ant-input-outlined):focus,
+:where(.ant-input-outlined):focus-within {
+  box-shadow: none !important;
+  border-color: #3772fe !important;
+  outline: none !important;
+}
+
+:where(.ant-select-focused).ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer) .ant-select-selector {
+  box-shadow: none !important;
+  border-color: #3772fe !important;
+}
+
+.ant-table-cell-scrollbar {
+  box-shadow: none !important;
+}
+
+.test_container_content_tabs {
+  display: flex;
+  height: 100%;
+}
+
+.test_container_content_tabs>.ant-tabs-content-holder {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.test_container_content_tabs>.ant-tabs-nav {
+  display: none !important;
+}
+
+/* 结束节点 Cascader 自定义样式 */
+.custom-end-cascader.ant-cascader {
+  width: 252px;
+  height: 32px;
+}
+
+.custom-end-cascader .ant-select-selector {
+  border-radius: 8px;
+  border: 1px solid #DDDFE4;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.custom-end-cascader.ant-select-focused .ant-select-selector {
+  border-color: #3772FE !important;
+  box-shadow: none !important;
+}
+
+/* Cascader 下拉面板样式 */
+.ant-cascader-dropdown .ant-cascader-menu-item-active {
+  background-color: #E8F4FD !important;
+  color: #1890FF !important;
+}
+
+.ant-cascader-dropdown .ant-cascader-menu-item:hover {
+  background-color: #f5f5f5 !important;
+}
+
+/* 通知提示框样式 */
+.ant-notification .ant-notification-notice-wrapper {
+  border-radius: 16px !important;
+}
+
+.ant-notification .ant-notification-notice-wrapper .ant-notification-notice {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0 !important;
+  background-image: var(--bg-image, none);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+}
+
+.ant-form-item-label {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.node_main_spin {
+  width: 100%;
+  height: 100%;
+
+
+}
+
+.node_main_spin>.ant-spin-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 编辑器内容区域 */
+.monaco-editor .editor-container {
+  border-radius: 8px !important;
+}
+
+.monaco-editor {
+  outline: none !important;
+}
+
+
+
+.monaco-editor .margin {
+  background: #F2F4F6 !important;
+  padding-left: 8px !important;
+}
+
+
+.monaco-editor .scrollbar.vertical {
+  width: 8px !important;
+}
+
+.monaco-editor .scrollbar.vertical .slider {
+  background: #ccc !important;
+  border-radius: 4px !important;
+}
+
+
+.monaco-editor .scrollbar.vertical .slider:hover {
+  background: #999 !important;
+}
+
+.span_required {
+  color: #ff4d4f;
+  padding-right: 3px;
+}
+.readOnly {
+  cursor: not-allowed!important;
+
+}
+
+.run_input_input{
+  background: #F5F9FC!important;
+  border-radius: 8px!important;
+}
+
+.run_input_select{
+ border-radius: 8px!important;
+ background: #F5F9FC!important;
+}
+.workflow_input_input{
+  background: #F5F9FC!important;
+  border-radius: 8px!important;
+  height: 36px!important;
+  line-height: 36px!important;
+}
+.workflow_input_select{
+  border-radius: 8px!important;
+}
+.node_delete_icon,.node_edit_icon{
+display: flex;
+align-items: center;
+justify-content: center;
+width: 24px;
+height: 24px;
+}
+.node_delete_icon>img{
+  
+}
+.node_delete_icon:hover{
+ 
+  border-radius: 5px 5px 5px 5px !important; 
+  background: rgba(238,90,85,0.1);
+}
+.node_edit_icon:hover{
+  background: #F2F4F6;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.node_panel_config{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  overflow: auto;
+  /* 隐藏滚动条 */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.node_panel_config::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.markdown-body {
+  background: #ffffff !important;
+}
+
+.ant-bubble-list {
+  /* 隐藏滚动条 */
+  scrollbar-width: none!important; /* Firefox */
+  -ms-overflow-style: none!important;  /* IE 10+ */
+}
+.ant-bubble-list::-webkit-scrollbar {
+  display: none!important; /* Chrome, Safari, Opera */
+}

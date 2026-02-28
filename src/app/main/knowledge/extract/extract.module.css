@@ -1,0 +1,370 @@
+/* 文档检验主页样式 */
+.document_main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #f3f4fb;
+  padding: 20px;
+}
+.left_back {
+  /* display: flex;
+  align-items: center;
+  cursor: pointer; */
+  margin-bottom: 12px;
+}
+.back_btn {
+  width: 80px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.left_back_icon {
+  width: 24px;
+  height: 24px;
+}
+.left_back_title {
+  font-weight: 400;
+  font-size: 14px;
+  color: #666e82;
+}
+.document_content {
+  flex: 1;
+  height: 100%;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 4px 4px 8px 0px rgba(35, 80, 222, 0.06);
+}
+
+.extract-check-utils {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 64px;
+  padding: 16px 24px;
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  border-color: #e0e5f2;
+}
+.document-title {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #121e3a;
+}
+.utils-left {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  font-size: 18px;
+  font-weight: 400;
+  color: #121e3a;
+}
+.utils-left .single-show-text {
+  font-size: 14px;
+  color: #626675;
+  margin-right: 10px;
+}
+.utils-left > div {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 20px;
+}
+.utils-left .label_value_wrapper::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 18px;
+  top: 5px;
+  right: 0;
+  background: #d9d9eb;
+}
+.utils-left .left-label {
+  margin-left: 5px;
+  color: #9095a3;
+}
+.utils-left .total-number {
+  font-weight: 700;
+  color: #4070fd;
+}
+.utils-left .total-other {
+  color: #121e3a;
+  font-weight: 700;
+}
+.utils-left .filter_button {
+  color: #4096ff;
+  border-color: #4096ff;
+  background: #ffffff;
+}
+/* 外层容器样式 */
+.extract-content {
+  height: calc(100% - 64px);
+  display: flex;
+}
+
+/* 左侧基础样式 */
+.extract-content .left-side {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 0 0 56px;
+  width: 56px;
+  background: #f9fafd;
+  padding: 16px 0;
+  border-right: solid 1px #e0e5f2;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 左侧头部样式 */
+.extract-content .left-side-header {
+  padding: 0 24px 10px;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  /* 注释：原SCSS中的//padding: 0 0 10px 0; 已移除，保留有效样式 */
+}
+
+/* 左侧头部 - 折叠控制按钮 */
+.extract-content .left-side-header .fold-control {
+  margin-left: auto;
+}
+
+.extract-content .left-side-header .fold-control:hover {
+  cursor: pointer;
+}
+
+/* 左侧内容区域样式 */
+.extract-content .left-side-content {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+/* 左侧内容区域 - 直接子级div */
+.extract-content .left-side-content > div {
+  padding: 0 24px;
+  overflow-y: auto;
+  height: 100%;
+}
+.extract-content .left-side-content > div::-webkit-scrollbar {
+  width: 5px !important;
+  height: 5px !important;
+}
+.extract-content .left-side-content > div::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+/* 左侧内容区域 - 代码块样式 */
+.extract-content .left-side-content pre {
+  width: 100%;
+  height: 100%;
+  word-break: break-word;
+}
+
+/* 左侧内容区域 - 深度选择器对应的antd折叠面板样式（保留原样式逻辑） */
+.extract-content .left-side-content .extract-chunk-collapse .ant-collapse-item {
+  border-bottom: none;
+}
+
+.extract-content
+  .left-side-content
+  .extract-chunk-collapse
+  .ant-collapse-item
+  .ant-collapse-header {
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 4px 4px 8px 0 rgba(35, 80, 222, 0.06);
+  margin-bottom: 12px;
+  color: #626675;
+}
+
+.extract-content
+  .left-side-content
+  .extract-chunk-collapse
+  .ant-collapse-item
+  .ant-collapse-content {
+  padding: 12px;
+  border-radius: 8px;
+  background: linear-gradient(
+    180deg,
+    rgba(233, 237, 247, 0.7) 0%,
+    rgba(245, 244, 246, 0.7) 100%
+  );
+}
+
+.extract-content
+  .left-side-content
+  .extract-chunk-collapse
+  .ant-collapse-item-active
+  .ant-collapse-header {
+  color: #121e3a;
+  font-weight: 500;
+}
+
+.extract-content
+  .left-side-content
+  .extract-chunk-collapse
+  .ant-collapse-item-disabled
+  .ant-collapse-header {
+  color: #b8b9ce;
+}
+
+.extract-content
+  .left-side-content
+  .extract-chunk-collapse
+  .ant-collapse-item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+/* 左侧底部样式 */
+.extract-content .left-side-footer {
+  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  height: 56px;
+}
+
+/* 左侧底部 - 操作按钮通用样式 */
+.extract-content .left-side-footer .action-button {
+  border-radius: 32px;
+  border: none;
+  font-weight: 500;
+  color: #000c17;
+  /* 模块阴影 */
+  box-shadow: 4px 4px 8px 0px rgba(35, 80, 222, 0.06);
+}
+
+/* 左侧底部 - 操作按钮禁用状态 */
+.extract-content .left-side-footer .action-button[disabled] {
+  color: #b8b9ce;
+  background-color: #ffffff;
+}
+
+.extract-content .left-side-footer .action-button[disabled] .anticon-backward,
+.extract-content .left-side-footer .action-button[disabled] .anticon-forward {
+  color: #b8b9ce !important;
+}
+
+/* 左侧底部 - 原始信息按钮 */
+.extract-content .left-side-footer .originalInfo-button {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* 左侧展开状态样式 */
+.extract-content .unfold {
+  flex-basis: 400px;
+}
+
+/* 右侧主内容区域样式 */
+.extract-content .right-main {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 24px;
+}
+
+/* 右侧主内容 - 操作栏样式 */
+.extract-content .right-main .main-action {
+  padding: 4px 16px;
+  margin-bottom: 10px;
+  background: linear-gradient(
+      0deg,
+      rgba(52, 199, 176, 0.08),
+      rgba(52, 199, 176, 0.08)
+    ),
+    #ffffff;
+  border: 1px solid rgba(52, 199, 176, 0.3);
+}
+
+/* 右侧主内容 - 操作栏普通按钮 */
+.extract-content .right-main .main-action .btn {
+  width: 64px;
+  border-radius: 4px;
+  opacity: 1;
+  background: #ffffff;
+  box-sizing: border-box;
+  /* 取消窗体按钮边框 */
+  border: 1px solid #b8b9ce;
+  font-size: 12px;
+  font-weight: 500;
+  /* 辅助次要 */
+  color: #9095a3;
+  margin-left: 10px;
+}
+
+/* 右侧主内容 - 操作栏主要按钮 */
+.extract-content .right-main .main-action .just_btn {
+  color: #ffffff;
+  border-radius: 4px;
+  opacity: 1;
+  background: #34c7b0;
+  border: none;
+  width: 64px;
+  font-size: 12px;
+}
+
+/* 右侧主内容 - 主要按钮禁用状态 */
+.extract-content .right-main .main-action .just_btn[disabled] {
+  background: rgba(52, 199, 176, 0.6);
+}
+
+.extract-chunk-collapse:global(.ant-collapse) {
+  background: none !important;
+}
+
+.extract-chunk-collapse :global(.ant-collapse-item) {
+  border-bottom: none !important;
+}
+.extract-chunk-collapse :global(.ant-collapse-item .ant-collapse-header) {
+  border-radius: 8px !important;
+  background: #ffffff;
+  box-shadow: 4px 4px 8px 0 rgba(35, 80, 222, 0.06);
+  margin-bottom: 12px;
+  color: #626675;
+}
+.extract-chunk-collapse :global(.ant-collapse-item .ant-collapse-content) {
+  padding: 12px;
+  border-radius: 8px;
+  background: linear-gradient(
+    180deg,
+    rgba(233, 237, 247, 0.7) 0%,
+    rgba(245, 244, 246, 0.7) 100%
+  );
+}
+.extract-chunk-collapse
+  :global(.ant-collapse-item-active .ant-collapse-header) {
+  color: #121e3a;
+  font-weight: 500;
+}
+.extract-chunk-collapse
+  :global(.ant-collapse-item-disabled .ant-collapse-header) {
+  color: #b8b9ce;
+}
+.extract-chunk-collapse :global(.ant-collapse-item:not(:last-child)) {
+  margin-bottom: 12px;
+}
+.text_light {
+  color: #4070ff;
+  font-weight: bold;
+}
+
+.extract-list-table
+  :global(
+    .ant-table-cell.ant-table-cell-fix-right.ant-table-cell-fix-right-first
+  ) {
+  padding: 0 !important;
+}
+
+.extract-list-table :global(.ant-table-thead > tr > th) {
+  background: #ffffff !important;
+}

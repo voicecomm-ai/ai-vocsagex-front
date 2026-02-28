@@ -1,0 +1,359 @@
+.app-manage-page {
+  padding: 32px;
+  height: 100%;
+  background: #f5f9fc;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-title {
+
+
+  display: flex;
+  margin-bottom: 25px;
+  min-width: 800px;
+}
+.page-title-text{
+  font-family: "Alibaba PuHuiTi";
+  font-weight: bold;
+  font-size: 24px;
+  color: #121e3a;
+}
+.title-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.app-list {
+  flex: 1;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 16px;
+  grid-auto-rows: min-content;
+  padding-top: 6px;
+}
+
+.app-list::-webkit-scrollbar {
+  display: none;
+}
+
+.tag-list-container {
+  background: #eee;
+  position: absolute;
+  top: 160px;
+  left: 18px;
+  right: 58px;
+  z-index: 20;
+  background: #ffffff;
+  box-shadow: 2px 2px 12px 0px rgba(102, 110, 130, 0.2);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.tag-search-container {
+  display: flex;
+  align-items: center;
+}
+
+.add-icon {
+  background: rgba(220, 220, 220, 0.3);
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.create-tag {
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 4px;
+  color: #666e82;
+  display: flex;
+  align-items: center;
+}
+
+.create-tag:hover {
+  background-color: #f4f4f4;
+}
+
+.app-card {
+  height: 162px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 16px !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+.app-card:global(.ant-card-bordered) {
+  border: none !important;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 48px;
+  justify-content: space-between;
+  margin-left: 10px;
+  min-width: 0;
+}
+
+/* 避免 space-between 导致 name 被压缩 */
+.card-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px; /* 控制草稿等和标题间距 */
+}
+
+/* 标题和图标区域 */
+.card-name {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  font-size: 16px;
+  color: #364052;
+}
+
+.name-text {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.updated-time {
+  font-size: 10px;
+  color: #8d96a7;
+  opacity: 0;
+  line-height: 22px;
+  height: 22px;
+}
+
+.draft {
+  padding: 2px 6px;
+  background-color: #f2f4f6;
+  border-radius: 6px;
+  font-weight: 400;
+  font-size: 12px;
+
+}
+
+.app-card:hover {
+  background: #fff !important;
+  box-shadow: 2px 2px 12px 0px rgba(102, 110, 130, 0.2);
+  border: 1px solid rgba(50, 103, 232, 0.2);
+}
+
+.app-card:hover .draft {
+  opacity: 1;
+}
+.app-card:hover .updated-time {
+  opacity: 1;
+}
+
+.describe {
+  font-size: 12px;
+  margin-top: 10px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  line-height: 1.5;
+  color: #666e82;
+  letter-spacing: 0.5px;
+}
+
+.tag-container {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
+.tag-text {
+  flex: 1;
+  margin-right: 8px;
+  border-radius: 8px;
+  padding: 4px 8px;
+  height: 30px;
+  cursor: pointer;
+  color: #8d96a7;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.tag-text-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+.ellipsis-icon-container {
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #f5f9fc;
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.3s;
+  flex-shrink: 0;
+  margin-left: auto; /* 无标签时仅此一项，仍靠右显示，避免切换列表后错位到左侧 */
+}
+
+.ellipsis-icon {
+  width: 24px;
+  height: 24px;
+}
+/* ✅ 鼠标移入 .app-card 时才显示图标 */
+.app-card:hover .ellipsis-icon-container {
+  opacity: 1;
+}
+
+.app-card .placeholder-tag {
+  visibility: hidden; /* 默认隐藏 */
+  color: #999;
+}
+
+/* 当鼠标移入 .app-card 时，显示 .placeholder-tag */
+.app-card:hover .placeholder-tag {
+  visibility: visible;
+}
+.popover-select {
+  cursor: pointer;
+  padding: 5px 18px;
+  border-radius: 4px;
+  color: #666e82;
+}
+.popover-select:hover {
+  background-color: #f2f4f6;
+  color: #101a28;
+}
+
+/* 管理标签 */
+.manage-tag-item {
+  display: inline-block;
+  border-radius: 8px;
+  border: 1px solid #dddfe4;
+  display: flex;
+  align-items: center;
+  padding: 7px 8px;
+  /* height: 32px; */
+  font-size: 12px;
+  color: #364052;
+}
+.tag-item {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+}
+
+.edit-icon {
+  margin-left: 8px;
+  cursor: pointer;
+  color: #666e82;
+}
+
+.delete-icon {
+  margin-left: 8px;
+  width: 14px;
+  height: 14px;
+  background-image: url("/application/delete_icon.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.delete-icon:hover {
+  background-image: url("/application/delete_icon_active.svg");
+  background-color: #f2f4f6;
+}
+
+.app_card_body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.app_card_body_content {
+  flex: 1;
+}
+
+.app-list_empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f4f6;
+  cursor: pointer;
+  margin-right: 8px !important;
+}
+
+.add-tag-btn {
+  background: #f5f9fc !important;
+  border: 1px solid #dddfe4 !important;
+  border-radius: 8px !important;
+  padding: 10px !important;
+}
+
+.app__onShelf{
+  width: 48px;
+height: 20px;
+background: rgba(50,187,123,0.16);
+border-radius: 4px;
+display: flex;
+display: -webkit-flex;
+align-items: center;
+justify-content: center;
+font-weight: normal;
+font-size: 12px;
+color: #32BB7B;
+}
+
+.popover-select-delete{
+  font-weight: normal;
+  color: #EE5A55;
+}
+.popover-select-delete:hover{
+  background: rgba(238,90,85,0.05);
+  color: #EE5A55;
+}
+
+.app_type_select{
+  width: 136px;
+
+  background: rgba(255,255,255,0.6);
+  border-radius: 8px 8px 8px 8px;
+  border: 1px solid #DDDFE4;
+}

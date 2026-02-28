@@ -1,0 +1,301 @@
+.fusion-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #f3f4fb;
+  padding: 20px;
+}
+.container {
+  height: 100%;
+  border-radius: 8px;
+  opacity: 1;
+  padding: 24px;
+  background: #ffffff;
+  box-shadow: 4px 4px 8px 0px rgba(35, 80, 222, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search-left,
+.search-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.node-select {
+  min-width: 300px;
+}
+.lable-wrapper-test {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* justify-content: space-between; */
+}
+.lable-name {
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #121e3a;
+  font-weight: normal;
+  min-width: 0;
+}
+.lable-remark {
+  flex: 0 1 auto; /* 不增长，可收缩 */
+  max-width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* flex-shrink: 0; */
+  color: #9095a3;
+  margin-left: 8px;
+  min-width: 0;
+}
+.content {
+  flex: 1;
+  min-width: 0;
+}
+.fusion-table {
+  width: fit-content;
+  max-width: 100%;
+  max-height: calc(100vh - 150px);
+  overflow: auto;
+  margin: 20px 0 auto;
+  border: 1px solid #e0e5f2;
+}
+.fusion-table::-webkit-scrollbar {
+  width: 5px !important;
+  height: 5px !important;
+}
+.fusion-table::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.fusion-table table {
+  width: max-content;
+  table-layout: fixed;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+.fusion-table th,
+.fusion-table td {
+  padding: 0;
+  height: 40px;
+}
+/* 固定表头 */
+.fusion-table thead > tr:first-child > th {
+  position: sticky;
+  top: 0;
+  z-index: 110;
+  height: 102px;
+  width: 230px;
+  background-color: #fff;
+  border-bottom: solid 1px #e0e5f2;
+  border-right: 1px solid #e0e5f2;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.fusion-table thead > tr:nth-child(2) > th {
+  text-align: left;
+  background-color: #fff;
+  position: sticky;
+  top: 102px;
+  z-index: 110;
+  border-bottom: solid 1px #e0e5f2;
+  border-right: 1px solid #e0e5f2;
+}
+.tag-row td {
+  background: rgba(243, 244, 251, 0.5);
+  border-left: none !important;
+  font-size: 14px;
+  font-weight: 600;
+  color: #121e3a;
+}
+
+/* 移除Th的默认样式 */
+.fusion-table th:not(:first-child) {
+  font-weight: normal;
+}
+/* 移除最后一列边右框样式 */
+.fusion-table thead > tr > th:last-child,
+.fusion-table tbody > tr > td:last-child {
+  border-right: none;
+}
+.fusion-table tr > td {
+  background-color: #fff;
+  border-bottom: solid 1px #e0e5f2;
+  word-break: break-word;
+}
+.fusion-table tr > td:not(:last-child) {
+  border-bottom: solid 1px #e0e5f2;
+  border-right: 1px solid #e0e5f2;
+}
+.fusion-table tr:last-child > td {
+  border-bottom: none;
+}
+/* 固定表头列 */
+.fusion-table thead > tr th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 120;
+}
+
+.fusion-table thead > tr th:nth-child(2) {
+  position: sticky;
+  left: 230px;
+  z-index: 120;
+}
+/* 表头列尾 */
+.fusion-table thead > tr th:last-child {
+  position: sticky;
+  right: 0;
+  z-index: 110;
+  border-left: 1px solid #e0e5f2;
+}
+/* 固定左列 */
+.fusion-table tr td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 100;
+}
+.fusion-table tr td:nth-child(2) {
+  position: sticky;
+  left: 230px;
+  z-index: 101;
+}
+.fusion-table tr td:last-child {
+  position: sticky;
+  right: 0;
+  z-index: 100;
+  border-left: 1px solid #e0e5f2;
+}
+
+.fusion-table tr td:not(:only-child) {
+  padding-left: 16px;
+}
+.fusion-table tr td:not(:first-child) {
+  font-size: 14px;
+  font-weight: normal;
+  color: #121e3a;
+}
+
+.fusion-table .text-tag {
+  text-align: left;
+}
+.fusion-table .text-tag td {
+  background: rgba(243, 244, 251, 0.5);
+  border-left: none !important;
+  font-size: 14px;
+  font-weight: 600;
+  color: #121e3a;
+}
+.no-border {
+  border-right: none;
+}
+.standardWord::before {
+  position: absolute;
+  content: attr(data-title);
+  top: 0;
+  left: 0;
+  color: #f9f9f9;
+  height: 26px;
+  border-radius: 0px 8px 8px 0px;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 10px;
+  background: linear-gradient(112deg, #4070fd 0%, #757beb 100%);
+}
+.sub-entity {
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+}
+.sub-entity-title {
+  margin-top: 26px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #121e3a;
+  /* max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  width: 100%; */
+}
+.sub-entity-id {
+  font-weight: 400;
+  font-size: 12px;
+  color: #9095a3;
+}
+.sub-entity-tag {
+  font-size: 12px;
+  color: #626675;
+}
+.sub-entity span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.vertex-vertexName {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.vertex-tagName {
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tag-edit-wrapper {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  width: 16px;
+  height: 16px;
+}
+.tag-edit-wrapper:hover {
+  cursor: pointer;
+}
+.fusion-result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+  gap: 5px;
+}
+.fusion-result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+  gap: 5px;
+}
+.fusion-result svg {
+  flex-shrink: 0;
+}
+.content-text {
+  flex: 1;
+  min-width: 0;
+  padding: 5px 0;
+  display: -webkit-box;
+  max-height: 88px;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+.text-link {
+  color: #4070fd;
+  cursor: pointer;
+}

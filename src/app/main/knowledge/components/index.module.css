@@ -1,0 +1,148 @@
+/* =================标签选择组件CustomMultiSelect================== */
+/* 容器样式 */
+.selectContainer {
+  position: relative;
+  /* width: 320px; */
+  /* width: 26%; */
+  z-index: 100;
+  margin: 0 8px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* 已选标签展示区域 */
+.tagDisplay {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 8px 8px 8px 8px;
+  border: 1px solid #dbe2ea;
+  padding: 8px 12px;
+  cursor: pointer;
+  max-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* gap: 8px; */
+}
+.selectTagContainer {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+.arrow {
+  width: 16px;
+  height: 16px;
+  transition: all 0.3s ease;
+  margin-left: 8px;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+
+/* 单个标签样式 */
+.tagItem {
+  font-size: 14px;
+  color: #364052;
+}
+
+/* 占位提示文字 */
+.placeholder {
+  color: #8d96a7;
+}
+
+/* 标签省略提示 */
+.tagEllipsis {
+  color: #999;
+}
+
+/* 下拉弹窗容器 */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  background: #ffffff;
+  box-shadow: 2px 2px 12px 0px rgba(102, 110, 130, 0.2);
+  border-radius: 8px 8px 8px 8px;
+  margin-top: 4px;
+}
+
+.inputContainer {
+  display: flex;
+  gap: 8px;
+}
+
+/* 搜索输入框 */
+.searchInput {
+  flex: 1;
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 10px !important;
+  outline: none;
+  background: #f5f9fc !important;
+  height: 32px !important;
+  border: none !important;
+}
+.addTagbtn {
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+}
+
+/* 选项列表容器 */
+.optionsList {
+  max-height: 346px;
+  overflow-y: auto;
+  font-size: 12px;
+}
+
+/* 单个选项样式 */
+.optionItem {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  gap: 8px;
+  color: #666e82;
+}
+
+/* 选项 hover 效果 */
+.optionItem:hover {
+  background: #f5f9fc;
+  border-radius: 4px 4px 4px 4px;
+}
+
+/* 复选框间距 */
+.checkbox {
+  margin-right: 8px;
+}
+
+.create-tag {
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 4px;
+  color: #666e82;
+  display: flex;
+  align-items: center;
+}
+
+.create-tag:hover {
+  background-color: #f4f4f4;
+}
+.searchIcon {
+  height: 12px;
+  width: 12px;
+}
+.selected_categories_content {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}

@@ -1,0 +1,45 @@
+
+.operator_content{
+
+height: 32px;
+
+display: flex;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 0 2px;
+gap: 12px;
+cursor: pointer;
+}
+.operator_img {
+  width: 24px;
+  height: 24px;
+}
+.operator_run_img{
+   width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+
+.operator_content_popover_item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  width: 100%;
+
+}
+
+.operator_content_popover_item_img {
+  width: 16px;
+  height: 16px;
+}
+.operator_content_popover_item_name {
+  font-size: 14px;
+  color: #101a28;
+}
+
+.workflow_editor_content{
+  background-color: #f5f9fc!important;
+}

@@ -1,0 +1,470 @@
+/* 模态框容器 */
+.documentFilterModal {
+  width: 100%;
+}
+
+/* 模态框头部 */
+.documentFilterModal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.documentFilterModal__headerTitle {
+  width: 100%;
+  height: 24px;
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 500;
+  font-size: 18px;
+  color: #121e3a;
+  line-height: 24px;
+  text-align: left;
+  font-style: normal;
+}
+
+.documentFilterModal__headerClose {
+  cursor: pointer;
+}
+
+/* 模态框内容区域 */
+.documentFilterModal__content {
+  width: 100%;
+}
+
+/* 逻辑操作符选择区域 */
+.documentFilterModal__logicSelector {
+  width: 100%;
+  height: 44px;
+  padding-top: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #666e82;
+  line-height: 24px;
+  text-align: left;
+  font-style: normal;
+}
+
+.logicSelector__container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logicSelector__label {
+  font-weight: 500;
+  font-size: 14px;
+  color: #666e82;
+  text-align: left;
+  font-style: normal;
+  margin-right: 6px;
+}
+
+.logicSelector__dropdown {
+  width: 64px;
+  height: 24px;
+  border-radius: 8px;
+  border: 1px solid #dddfe4;
+  margin-left: 8px;
+  margin-right: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logicSelector__text {
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 500;
+  font-size: 12px;
+  color: #3772fe;
+  font-style: normal;
+  margin-right: 2px;
+}
+
+.logicSelector__dropdown:hover > .logicSelector__popup {
+  height: 56px;
+  padding: 8px;
+  opacity: 1;
+  z-index: 99;
+}
+
+.logicSelector__popup {
+  position: absolute;
+  left: -16%;
+  top: 116%;
+  width: 80px;
+  height: 0px;
+  opacity: 0;
+  background: #ffffff;
+  box-shadow: 1px 1px 12px 0px rgba(100, 113, 152, 0.5);
+  border-radius: 12px;
+  transition: all 0.2s 0.1s;
+}
+
+.logicSelector__popupList {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logicSelector__popupItem {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logicSelector__popupItem:hover {
+  background: rgba(55, 114, 254, 0.05);
+}
+
+/* 过滤条件区域 */
+.documentFilterModal__filterArea {
+  width: 100%;
+  padding-top: 16px;
+}
+
+/* 添加条件按钮 */
+.filterArea__addButton {
+  width: 128px;
+  height: 100%;
+  background: #f2f4f680;
+  border-radius: 6px;
+  border: 1px solid #dddfe4;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.filterArea__addButtonText {
+  height: 16px;
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 500;
+  font-size: 12px;
+  color: #364052;
+  line-height: 16px;
+  text-align: left;
+  font-style: normal;
+  margin-left: 4px;
+}
+
+/* 属性选择弹窗 */
+.filterArea__attributePopup {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 320px;
+  background: #ffffff;
+  box-shadow: 2px 2px 12px 0px rgba(102, 110, 130, 0.2);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.attributePopup__search {
+  height: 42px;
+  padding-bottom: 10px;
+}
+
+.attributePopup__list {
+  width: 100%;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.attributePopup__item {
+  width: 100%;
+  height: 32px;
+  padding-left: 8px;
+  padding-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.attributePopup__item:hover {
+  background: #f2f4f6;
+  border-radius: 4px;
+}
+
+.attributePopup__itemLeft {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.attributePopup__itemName {
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 400;
+  font-size: 12px;
+  color: #364052;
+  text-align: left;
+  font-style: normal;
+  margin-left: 8px;
+}
+
+.attributePopup__itemType {
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 400;
+  font-size: 12px;
+  color: #666e82;
+  text-align: center;
+  font-style: normal;
+}
+
+/* 过滤条件项 */
+.filterCondition {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filterCondition__attribute {
+  flex: 1;
+  height: 36px;
+  background: #F2F4F6;
+  border-radius: 8px;
+  border: 1px solid #DDDFE4;
+  display: flex;
+  align-items: center;
+  padding-left: 4px;
+  gap: 6px;
+}
+
+.filterCondition__attribute_img{
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.filterCondition__attributeName {
+  font-weight: 500;
+  font-size: 12px;
+  color: #364052;
+  text-align: left;
+  font-style: normal;
+
+  margin-right: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFFFFF;
+border-radius: 6px;
+padding: 4px;
+}
+
+.filterCondition__attributeType {
+  font-weight: 400;
+  font-size: 12px;
+  color: #666E82;
+  text-align: center;
+  font-style: normal;
+  margin-left: 4px;
+}
+
+.filterCondition__operator {
+  width: 86px;
+  height: 36px;
+}
+
+.filterCondition__operatorSelect {
+  width: 100%;
+  height: 36px!important;
+  background: #F2F4F6!important;
+  border-radius: 8px!important;
+
+}
+
+.filterCondition__value {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+/* 值类型选择器 */
+.valueTypeSelector {
+  height: 100%;
+  width: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.valueTypeSelector__text {
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 500;
+  font-size: 14px;
+  color: #364052;
+  text-align: left;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.valueTypeSelector__text:hover ~ .valueTypeSelector__icon {
+  transform: rotate(180deg);
+}
+
+.valueTypeSelector__icon {
+  transition: transform 0.2s ease;
+}
+
+.valueTypeSelector__popup {
+  position: absolute;
+  top: 120%;
+  left: -20%;
+  width: 80px;
+  height: 0px;
+  opacity: 0;
+  background: #ffffff;
+  box-shadow: 1px 1px 12px 0px rgba(100, 113, 152, 0.5);
+  border-radius: 12px;
+  transition: all 0.2s 0.1s;
+  z-index: 99999 !important;
+}
+
+.valueTypeSelector__popupList {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.valueTypeSelector__popupItem {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.valueTypeSelector__popupItem:hover {
+  background: rgba(55, 114, 254, 0.05);
+}
+
+.valueTypeSelector:hover > .valueTypeSelector__popup {
+  height: 56px;
+  padding: 8px;
+  opacity: 1;
+  z-index: 99;
+}
+
+.valueTypeSelector__divider {
+  width: 1px;
+  height: 20px;
+  background: #FFFFFF;
+  margin-left: 4px;
+}
+
+/* 值输入区域 */
+.valueInput {
+  width: calc(100% - 86px);
+  height: 100%;
+}
+
+.valueInput__variable {
+  width: 100%;
+  height: 100%;
+  padding-right: 6px;
+  padding-left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.valueInput__variableText {
+  height: 20px;
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 400;
+  font-size: 14px;
+  color: #8D96A7;
+  text-align: left;
+  font-style: normal;
+}
+
+.valueInput__variableTag {
+  width: 54px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid #DDDFE4;
+  font-family: AlibabaPuHuiTi, AlibabaPuHuiTi;
+  font-weight: 400;
+  font-size: 12px;
+  color: #666E82;
+  line-height: 20px;
+  text-align: center;
+  font-style: normal;
+}
+
+/* 字符串类型值输入 */
+.stringValueInput {
+  width: 328px;
+  height: 36px;
+  background: #F2F4F6;
+  border-radius: 8px;
+  border: 1px solid #DDDFE4;
+  margin-right: 10px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* 数字类型值输入 */
+.numberValueInput {
+  width: 328px;
+  height: 36px;
+  background: #F2F4F6;
+  border-radius: 8px;
+  border: 1px solid #DDDFE4;
+  margin-right: 10px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* 时间类型值输入 */
+.timeValueInput {
+  width: 328px;
+  height: 36px;
+  background: #F2F4F6;
+  border-radius: 8px;
+
+  margin-right: 10px;
+}
+
+/* 删除按钮 */
+.filterCondition__delete {
+  cursor: pointer;
+}
+
+/* 过滤条件列表 */
+.filterConditionList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px; 
+  max-height: 320px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.filterConditionList__addButton {
+  width: 100%;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+}
+
+/* 模态框样式 */
+.my-modal-content {
+  /* 保持原有的模态框样式 */
+}

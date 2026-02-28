@@ -1,0 +1,36 @@
+.api_container{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+   flex: 1;
+  width: 100%;
+  background: #FFFFFF;
+  overflow: hidden;
+
+}
+.api_render_box{
+  flex: 1;
+  padding:  12px 240px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* 自定义细滚动条 */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #c0c4cc #f5f7fa; /* Firefox */
+}
+/* Chrome/Safari/Webkit 滚动条样式 */
+.api_render_box::-webkit-scrollbar {
+  width: 6px;
+  background: #f5f7fa;
+}
+.api_render_box::-webkit-scrollbar-thumb {
+  background: #c0c4cc;
+  border-radius: 3px;
+}
+.api_render_box::-webkit-scrollbar-track {
+  background: #f5f7fa;
+  border-radius: 3px;
+}
+.api_box_header{
+  display: flex;
+  justify-content: space-between;
+}

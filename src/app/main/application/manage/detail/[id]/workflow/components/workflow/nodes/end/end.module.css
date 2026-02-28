@@ -1,0 +1,22 @@
+.end_node{
+  background: linear-gradient( 360deg, rgba(255,84,97,0) 0%, rgba(255,84,97,0.06) 100%)no-repeat,#FFFFFF;
+ 
+  background-size: 100% 55px;
+  background-position: top;
+}
+
+.end_node_variable_item_title{
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  gap: 1px;
+}
+.end_node_variable_item_title_text{
+  font-size: 12px !important;
+  color: #364052 !important;
+
+}
+.start_panel_variable_name{
+  font-size: 14px;
+color: #3772FE;
+}
